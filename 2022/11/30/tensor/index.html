@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.13.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Basic Information  Title: Tensor Decomposition and Applications Authors: Tamara G. Kolda et al. Pub Date: 2008-06-10 Journal&#x2F;Conference: SIAM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tensor Decomposition and Applications">
+<meta property="og:url" content="http://example.com/2022/11/30/tensor/index.html">
+<meta property="og:site_name" content="Hongjue&#39;s Space">
+<meta property="og:description" content="Basic Information  Title: Tensor Decomposition and Applications Authors: Tamara G. Kolda et al. Pub Date: 2008-06-10 Journal&#x2F;Conference: SIAM">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-11-30T06:26:55.000Z">
+<meta property="article:modified_time" content="2022-11-30T06:36:38.249Z">
+<meta property="article:author" content="Hongjue Zhao">
+<meta property="article:tag" content="tensor decomposition">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2022/11/30/tensor/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2022/11/30/tensor/","path":"2022/11/30/tensor/","title":"Tensor Decomposition and Applications"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Tensor Decomposition and Applications | Hongjue's Space</title>
+  
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hongjue's Space</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section">Home</a></li><li class="menu-item menu-item-about"><a href="/About-Me/" rel="section">About</a></li><li class="menu-item menu-item-tags"><a href="/Tags/" rel="section">Tags</a></li><li class="menu-item menu-item-categories"><a href="/Categories/" rel="section">Categories</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-information"><span class="nav-number">1.</span> <span class="nav-text">Basic Information</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction"><span class="nav-number">2.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#notation-preliminaries"><span class="nav-number">3.</span> <span class="nav-text">Notation &amp; Preliminaries</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#rank-one-tensors"><span class="nav-number">3.1.</span> <span class="nav-text">Rank-one Tensors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#symmetry-and-tensors"><span class="nav-number">3.2.</span> <span class="nav-text">Symmetry and Tensors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#diagonal-tensors"><span class="nav-number">3.3.</span> <span class="nav-text">Diagonal Tensors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#matricization"><span class="nav-number">3.4.</span> <span class="nav-text">Matricization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tensor-multiplication-the-n-mode-product"><span class="nav-number">3.5.</span> <span class="nav-text">Tensor Multiplication:
+the n-mode product</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#matrix-kronecker-khatri-rao-and-hadamard-products"><span class="nav-number">3.6.</span> <span class="nav-text">Matrix
+Kronecker, Khatri-Rao and Hadamard Products</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#candecompparafac-decomposition"><span class="nav-number">4.</span> <span class="nav-text">CANDECOMP&#x2F;PARAFAC
+Decomposition</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#introduction-1"><span class="nav-number">4.1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tensor-rank"><span class="nav-number">4.2.</span> <span class="nav-text">Tensor Rank</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uniqueness"><span class="nav-number">4.3.</span> <span class="nav-text">Uniqueness</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#low-rank-approximations-and-the-border-rank"><span class="nav-number">4.4.</span> <span class="nav-text">Low-rank
+Approximations and the Border Rank</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#computing-the-cp-decomposition"><span class="nav-number">4.5.</span> <span class="nav-text">Computing the CP
+Decomposition</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tucker-decomposition"><span class="nav-number">5.</span> <span class="nav-text">Tucker Decomposition</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#the-n-rank"><span class="nav-number">5.1.</span> <span class="nav-text">The \(n\)-Rank</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#computing-the-tucker-decomposition"><span class="nav-number">5.2.</span> <span class="nav-text">Computing the Tucker
+Decomposition</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Hongjue Zhao</p>
+  <div class="site-description" itemprop="description">Welcome to My Personal Web & Blog!</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ZhaoHongjue" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ZhaoHongjue" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="Hongjue:hongjue0830@zju.edu.cn" title="E-Mail → Hongjue:hongjue0830@zju.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/30/tensor/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hongjue Zhao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongjue's Space">
+      <meta itemprop="description" content="Welcome to My Personal Web & Blog!">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Tensor Decomposition and Applications | Hongjue's Space">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Tensor Decomposition and Applications
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-11-30 14:26:55 / Modified: 14:36:38" itemprop="dateCreated datePublished" datetime="2022-11-30T14:26:55+08:00">2022-11-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/paper/" itemprop="url" rel="index"><span itemprop="name">paper</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="basic-information">Basic Information</h2>
+<ul>
+<li><strong>Title</strong>: Tensor Decomposition and Applications</li>
+<li><strong>Authors</strong>: Tamara G. Kolda et al.</li>
+<li><strong>Pub Date</strong>: 2008-06-10</li>
+<li><strong>Journal/Conference</strong>: SIAM</li>
+</ul>
+<span id="more"></span>
+<h2 id="introduction">Introduction</h2>
+<p><strong>Tensor</strong>: a multidimensional array. or formally, <span
+class="math inline">\(N\)</span>-th order tensor is an element of the
+<strong><em>tensor product</em></strong> of <span
+class="math inline">\(N\)</span> vector spaces, each of which has its
+own coordinate system.</p>
+<ul>
+<li>A first-order is a vector, a second-order tensor is a matrix.</li>
+</ul>
+<p><img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20221122103509859.png" /></p>
+<h2 id="notation-preliminaries">Notation &amp; Preliminaries</h2>
+<ul>
+<li><p><strong>Order</strong>: the number of dimensions, also known as
+<em>ways</em> or <em>modes</em></p></li>
+<li><p><strong>Fibers</strong>: the higher order analogue of matrix rows
+and columns. A fiber is defined by fixing every index but one.</p>
+<ul>
+<li>A matrix column is a mode-1 fiber and a matrix row is a mode-2
+fiber.</li>
+<li>Third-order tensors have <em>column</em>, <em>row</em>, and
+<em>tube</em> fibers, denoted by <span
+class="math inline">\(\boldsymbol{x}_{:jk}\)</span>, <span
+class="math inline">\(\boldsymbol{x}_{i:k}\)</span>, <span
+class="math inline">\(\boldsymbol{x}_{ij:}\)</span>.</li>
+</ul>
+<p><img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20221122103606059.png" /></p></li>
+<li><p><strong>Slices</strong>: two-dimensional sections of a tensor,
+defined by fixing all but two indices.</p>
+<p><img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20221122103627741.png" /></p></li>
+<li><p><strong>Norm</strong>: the square root of the sum of the squares
+of all its elements. For <span
+class="math inline">\(\boldsymbol{\mathcal{X}} \in \mathbb{R}^{I_1
+\times I_2 \times \dots \times I_N}\)</span>: <span
+class="math display">\[
+  \| \boldsymbol{\mathcal{X}} \| =
+\sqrt{\sum_{i_1=1}^{I_1}\sum_{i_1=1}^{I_2} \dots \sum_{i_1=1}^{I_N}
+x_{i_1i_2\dots i_N}^2  }
+  \]</span></p></li>
+</ul>
+<h3 id="rank-one-tensors">Rank-one Tensors</h3>
+<p>A <span class="math inline">\(N\)</span>-way tensor <span
+class="math inline">\(\boldsymbol{\mathcal{X}} \in \mathbb{R}^{I_1
+\times I_2 \times \dots \times I_N}\)</span> is
+<strong><em>rank-one</em></strong> if it can be written as the
+<strong>outer product</strong> of <span class="math inline">\(N\)</span>
+vectors</p>
+<p><span class="math display">\[
+\boldsymbol{\mathcal{X}} = \boldsymbol{a}^{(1)} \circ
+\boldsymbol{a}^{(2)} \circ \dots \circ \boldsymbol{a}^{(N)}
+\]</span></p>
+<p>The symbol “<span class="math inline">\(\circ\)</span>” represents
+the <em>vector outer product</em>. This means each element of the tensor
+is the product of the corresponding vector elements:</p>
+<p><span class="math display">\[
+x_{i_1i_2\dots i_N} = a^{(1)}_{i_1} a^{(2)}_{i_2} \dots a^{(N)}_{i_N}
+\]</span></p>
+<p><img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20221122110809152.png" /></p>
+<h3 id="symmetry-and-tensors">Symmetry and Tensors</h3>
+<ul>
+<li>A tensor is called <em>cubical</em> if every mode is the same size,
+i.e., <span class="math inline">\(\boldsymbol{\mathcal{X}} =
+\mathbb{R}^{I \times I \times \dots \times I}\)</span></li>
+<li>A cubical tensor is called
+<em>supersymmetric</em>/<em>symmetric</em> if its elements remain
+constant under any permutation of the indices
+<ul>
+<li>For instance, a 3-way tensor <span
+class="math inline">\(\boldsymbol{\mathcal{X}} \in \mathbb{R}^{I \times
+I \times I}\)</span> is supersymmetric if <span class="math display">\[
+  x_{ijk} = x_{ikj} = x_{jik} = x_{jki} = x_{kij} = x_{kji}, \quad
+\text{for all}~ i, j, k = 1, \dots, I
+  \]</span></li>
+</ul></li>
+<li>Tensors can be (partially) <em>symmetric</em> in 2 or more modes as
+well.
+<ul>
+<li>For example, a 3-way tensor <span
+class="math inline">\(\boldsymbol{\mathcal{X}} \in \mathbb{R}^{I \times
+I \times K}\)</span> is symmetric in <em>modes 1 and 2</em> if all its
+frontal slices are symmetric, i.e.</li>
+</ul>
+<span class="math display">\[
+  \boldsymbol{X}_k = \boldsymbol{X}_k^\top \quad \text{for all}~k = 1,
+\dots, K.
+  \]</span></li>
+</ul>
+<h3 id="diagonal-tensors">Diagonal Tensors</h3>
+<p>A tensor <span class="math inline">\(\boldsymbol{\mathcal{X}} \in
+\mathbb{R}^{I_1 \times I_2 \times \dots \times I_N}\)</span> is
+<em>diagonal</em> if <span class="math inline">\(x_{i_1i_2\dots i_N} \ne
+0\)</span> only if <span class="math inline">\(i_1 \ne i_2 \ne \dots \ne
+i_N\)</span>.</p>
+<figure>
+<img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20221122132404141.png"
+alt="image-20221122132404141" />
+<figcaption aria-hidden="true">image-20221122132404141</figcaption>
+</figure>
+<h3 id="matricization">Matricization</h3>
+<ul>
+<li><p><em>Matricization</em>, also known as <em>unfolding</em> or
+<em>flattening</em>, is the process of <em>reordering the elements of an
+<span class="math inline">\(N\)</span> way array into a
+matrix</em>.</p></li>
+<li><p>The mode-<span class="math inline">\(n\)</span> matricization of
+a tensor <span class="math inline">\(\boldsymbol{\mathcal{X}} ∈
+\mathbb{R}^{I_1 \times I_2 \times \dots \times I_N}\)</span> is denoted
+by <span class="math inline">\(\boldsymbol{X}_{(n)}\)</span> and
+<strong>arranges the mode-<span class="math inline">\(n\)</span> fibers
+to be the columns of the resulting matrix</strong>.</p></li>
+<li><p>Tensor element <span class="math inline">\((i_1, i_2, \dots,
+i_n)\)</span> maps to matrix element <span class="math inline">\((i_n,
+j)\)</span> where <span class="math display">\[
+j = 1 + \sum_{k = 1,~ k\ne n}^N (i_k - 1) J_k, \quad \text{with}~J_k =
+\prod_{m=1,~m\ne n}^{k-1} I_m
+\]</span></p></li>
+</ul>
+<p>e.g. <span class="math display">\[
+\boldsymbol{X}_1 =
+\begin{bmatrix}
+0  &amp; 2  &amp; 4  &amp; 6\\
+8  &amp; 10 &amp; 12 &amp; 14\\
+16 &amp; 18 &amp; 20 &amp; 22\\
+\end{bmatrix},~
+\boldsymbol X_2 =
+\begin{bmatrix}
+1  &amp; 3  &amp; 5  &amp; 7\\
+9  &amp; 11 &amp; 13 &amp; 15\\
+17 &amp; 19 &amp; 21 &amp; 23\\
+\end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\boldsymbol X_{(1)} =
+\begin{bmatrix}
+   0  &amp; 1  &amp; 2  &amp; 3  &amp;  4 &amp; 5  &amp; 6  &amp; 7\\
+   8  &amp; 9  &amp; 10 &amp; 11 &amp; 12 &amp; 13 &amp; 14 &amp; 15\\
+   16 &amp; 17 &amp; 18 &amp; 19 &amp; 20 &amp; 21 &amp; 22 &amp; 23\\
+\end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\boldsymbol X_{(2)} =
+\begin{bmatrix}
+   0 &amp; 1 &amp; 8  &amp; 9  &amp; 16 &amp; 17\\
+   2 &amp; 3 &amp; 10 &amp; 11 &amp; 18 &amp; 19\\
+   4 &amp; 5 &amp; 12 &amp; 13 &amp; 20 &amp; 21\\
+   6 &amp; 7 &amp; 14 &amp; 15 &amp; 22 &amp; 23\\
+\end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\boldsymbol X_{(3)} =
+\begin{bmatrix}
+   0 &amp; 2 &amp; 4 &amp; 6 &amp; 8 &amp; 10 &amp; 12 &amp; 14 &amp; 16
+&amp; 18 &amp; 20 &amp; 22\\
+   1 &amp; 3 &amp; 5 &amp; 7 &amp; 9 &amp; 11 &amp; 13 &amp; 15 &amp; 17
+&amp; 19 &amp; 21 &amp; 23\\
+\end{bmatrix}
+\]</span></p>
+<h3 id="tensor-multiplication-the-n-mode-product">Tensor Multiplication:
+the n-mode product</h3>
+<ul>
+<li><p><strong><span class="math inline">\(n\)</span>-mode
+(<em>matrix</em>) product</strong>: For a tensor <span
+class="math inline">\(\boldsymbol{\mathcal{X}} \in \mathbb{R}^{I_1
+\times I_2 \times \dots \times I_N}\)</span> and a matrix <span
+class="math inline">\(\boldsymbol{U} \in \mathbb{R}^{J\times
+I_n}\)</span>: <span class="math display">\[
+(\boldsymbol{\mathcal{X}} \times_n \boldsymbol{U})_{i_1\dots i_{n-1}j
+i_{n+1} \dots i_N} = \sum_{i_n = 1}^{I_n} x_{i_1\dots i_N} u_{ji_n}
+\]</span> or in unfolded form: <span class="math display">\[
+\boldsymbol{\mathcal{Y}} = \boldsymbol{\mathcal{X}} \times_n
+\boldsymbol{U} \Leftrightarrow \boldsymbol{Y}_{(n)} =
+\boldsymbol{UX}_{(n)}
+\]</span></p>
+<ul>
+<li><strong><em>Commutive Law</em></strong>: <span
+class="math inline">\(\boldsymbol{\mathcal{X}} \times_m \boldsymbol{A}
+\times_n \boldsymbol{B} = \boldsymbol{\mathcal{X}} \times_n
+\boldsymbol{B} \times_m \boldsymbol{A}\)</span></li>
+<li><strong><em>Associative Law</em></strong>: <span
+class="math inline">\(\boldsymbol{\mathcal{X}} \times_n \boldsymbol{A}
+\times_n \boldsymbol{B} = \boldsymbol{\mathcal{X}} \times_n
+(\boldsymbol{B} \boldsymbol{A})\)</span></li>
+</ul></li>
+<li><p><strong><span class="math inline">\(n\)</span>-mode
+(<em>vector</em>) product</strong>: For a tensor <span
+class="math inline">\(\boldsymbol{\mathcal{X}} \in \mathbb{R}^{I_1
+\times I_2 \times \dots \times I_N}\)</span> and a vector <span
+class="math inline">\(\boldsymbol{v} \in \mathbb{R}^{I_n}\)</span> <span
+class="math display">\[
+(\boldsymbol{\mathcal{X}} \bar{\times}_n \boldsymbol{v})_{i_1\dots
+i_{n-1} i_{n+1} \dots i_N} = \sum_{i_n = 1}^{I_n} x_{i_1\dots i_N}
+v_{i_n}
+\]</span></p>
+<ul>
+<li>When it comes to mode-n vector multiplication, precedence matters
+because the order of the intermediate results change. <span
+class="math display">\[
+\boldsymbol{\mathcal{X}} \times_m \boldsymbol{a} \times_n \boldsymbol{b}
+=  (\boldsymbol{\mathcal{X}} \times_m \boldsymbol{a}) \times_{n-1}
+\boldsymbol{b} =
+(\boldsymbol{\mathcal{X}}  \times_{n} \boldsymbol{b} )\times_m
+\boldsymbol{a}
+~(m &lt; n)
+\]</span></li>
+</ul></li>
+</ul>
+<h3 id="matrix-kronecker-khatri-rao-and-hadamard-products">Matrix
+Kronecker, Khatri-Rao and Hadamard Products</h3>
+<p><strong>Kronecker Product</strong>: <span class="math display">\[
+\boldsymbol{A} \otimes \boldsymbol{B} = \begin{bmatrix}
+a_{11}\boldsymbol{B} &amp; \cdots &amp; a_{1J}\boldsymbol{B}\\
+\vdots &amp; \ddots &amp; \vdots\\
+a_{I1}\boldsymbol{B} &amp; \cdots &amp; a_{IJ}\boldsymbol{B}
+\end{bmatrix}
+=
+\begin{bmatrix}
+\boldsymbol{a}_1 \otimes \boldsymbol{b}_1 &amp; \boldsymbol{a}_1 \otimes
+\boldsymbol{b}_2
+&amp; \cdots &amp;
+\boldsymbol{a}_J \otimes \boldsymbol{b}_L
+\end{bmatrix}
+\]</span> <strong>Khatri-Rao Product</strong>: <span
+class="math display">\[
+\boldsymbol{A} \odot \boldsymbol{B} = \begin{bmatrix}
+\boldsymbol{a}_1 \otimes \boldsymbol{b}_1 &amp; \boldsymbol{a}_2 \otimes
+\boldsymbol{b}_2 &amp; \cdots &amp; \boldsymbol{a}_K \otimes
+\boldsymbol{b}_K
+\end{bmatrix}
+\]</span> For vectors, the Khatri-Rao and Kronecker products are
+identical, i.e., <span class="math inline">\(\boldsymbol{a} \otimes
+\boldsymbol{b} = \boldsymbol{a} \odot \boldsymbol{b}\)</span>.</p>
+<p><strong>Hadmard Product</strong>: <span class="math display">\[
+\boldsymbol{A} * \boldsymbol{B} = \begin{bmatrix}
+a_{11}b_{11} &amp; \cdots &amp; a_{1J}b{1J}\\
+\vdots &amp; \ddots &amp; \vdots \\
+a_{I1}b_{I1} &amp; \cdots &amp; a_{IJ}b_{IJ}
+\end{bmatrix}
+\]</span> These matrix products have properties: <span
+class="math display">\[
+\begin{aligned}
+(\boldsymbol A \otimes \boldsymbol B)(\boldsymbol C \otimes \boldsymbol
+D) &amp;= \boldsymbol A \boldsymbol C \otimes \boldsymbol B \boldsymbol
+D\\
+(\boldsymbol A \otimes \boldsymbol B)^\dagger &amp;= \boldsymbol
+A^\dagger \otimes \boldsymbol B^\dagger\\
+\boldsymbol A \odot \boldsymbol B \odot \boldsymbol C &amp;=
+(\boldsymbol A \odot \boldsymbol B) \odot \boldsymbol C = \boldsymbol A
+\odot (\boldsymbol B \odot \boldsymbol C)\\
+(\boldsymbol A \odot \boldsymbol B)^\top (\boldsymbol A \odot
+\boldsymbol B) &amp;= \boldsymbol A^\top \boldsymbol A * \boldsymbol
+B^\top \boldsymbol B\\
+(\boldsymbol A \odot \boldsymbol B)^\dagger &amp;= (\boldsymbol A^\top
+\boldsymbol A * \boldsymbol B^\top \boldsymbol B)^\dagger (\boldsymbol A
+\odot \boldsymbol B)^\top
+\end{aligned}
+\]</span> <span class="math inline">\(\boldsymbol A^\dagger\)</span>
+denotes the Moore-Penrose pseudoinverse of <span
+class="math inline">\(\boldsymbol{A}\)</span>.</p>
+<p>In fact: <span class="math display">\[
+\boldsymbol{\mathcal{Y}} = \boldsymbol{\mathcal{X}} \times_1
+\boldsymbol{A}^{(1)} \times_2 \boldsymbol{A}^{(2)} \times \dots \times_N
+\boldsymbol{A}^{(N)} \Leftrightarrow\\
+\boldsymbol{Y}_{(n)} = \boldsymbol{A}^{(n)}\boldsymbol{X}_{(n)} \left(
+\boldsymbol{A}^{(N)} \otimes \dots  \otimes
+\boldsymbol{A}^{(n+1)}  \otimes \boldsymbol{A}^{(n-1)} \otimes \dots
+\otimes \boldsymbol{A}^{(1)} \right)^\top
+\]</span></p>
+<h2 id="candecompparafac-decomposition">CANDECOMP/PARAFAC
+Decomposition</h2>
+<h3 id="introduction-1">Introduction</h3>
+<p>The CP decomposition factorizes a tensor into <strong>a sum of
+component rank-one tensors</strong>. e.g., given a third-order tensor
+<span class="math inline">\(\boldsymbol{\mathcal{X}} \in
+\mathbb{R}^{I\times J \times K}\)</span>, we wish to write it as <span
+class="math display">\[
+\boldsymbol{\mathcal{X}} \approx \sum_{r=1}^R \boldsymbol{a}_r \circ
+\boldsymbol{b}_r \circ \boldsymbol{c}_r
+\]</span> where <span class="math inline">\(R\)</span> is a positive
+integer, and <span class="math inline">\(\boldsymbol{a}_r \in
+\mathbb{R}^{I}\)</span>, <span class="math inline">\(\boldsymbol{b}_r
+\in \mathbb{R}^{J}\)</span>, <span
+class="math inline">\(\boldsymbol{c}_r \in \mathbb{R}^{K}\)</span>, for
+<span class="math inline">\(r = 1, \dots R\)</span>.</p>
+<ul>
+<li><p><strong>Elementwise Form</strong>: <span class="math display">\[
+  x_{ijk} = \sum_{r=1}^R a_{ir} b_{jr} c_{kr}, \text{for}\  i = 1,\dots,
+I, j = 1,\dots, J, k = 1,\dots, K
+  \]</span></p></li>
+<li><p><strong>Matricized Form</strong>: <span class="math display">\[
+  \begin{aligned}
+  \boldsymbol{X}_{(1)} &amp;= \boldsymbol{A} (\boldsymbol{C} \odot
+\boldsymbol{B})^\top\\
+  \boldsymbol{X}_{(2)} &amp;= \boldsymbol{B} (\boldsymbol{C} \odot
+\boldsymbol{A})^\top\\
+  \boldsymbol{X}_{(3)} &amp;= \boldsymbol{C} (\boldsymbol{B} \odot
+\boldsymbol{A})^\top\\
+  \end{aligned}
+  \]</span></p></li>
+</ul>
+<p>The CP model can be concisely expressed as <span
+class="math display">\[
+\boldsymbol{\mathcal{X}} \approx [\boldsymbol A, \boldsymbol B,
+\boldsymbol C] = \sum_{r=1}^R \boldsymbol{a}_r \circ \boldsymbol{b}_r
+\circ \boldsymbol{c}_r
+\]</span> It is often useful to assume that the columns of <span
+class="math inline">\(\boldsymbol A, \boldsymbol B, \boldsymbol
+C\)</span> are normalized to length one with the weights absorbed into
+the vector <span class="math inline">\(\boldsymbol \lambda \in
+\mathbb{R}^{R}\)</span> so that <span class="math display">\[
+\boldsymbol{\mathcal{X}} \approx [\boldsymbol \lambda;\boldsymbol A,
+\boldsymbol B, \boldsymbol C] \equiv \sum_{r=1}^R \lambda_r
+\boldsymbol{a}_r \circ \boldsymbol{b}_r \circ \boldsymbol{c}_r
+\]</span> For <strong>high order form</strong>: <span
+class="math display">\[
+\boldsymbol{\mathcal{X}} \approx [\boldsymbol \lambda;\boldsymbol
+A^{(1)}, \boldsymbol A^{(2)}, \dots, \boldsymbol A^{(N)}] \equiv
+\sum_{r=1}^R \lambda_r \boldsymbol{a}^{(1)}_r \circ
+\boldsymbol{a}^{(2)}_r \circ \dots \circ \boldsymbol{a}^{(N)}_r
+\]</span> where <span class="math inline">\(\boldsymbol \lambda \in
+\mathbb{R}^{R}\)</span> and <span
+class="math inline">\(\boldsymbol{A}^{(n)} \in \mathbb{R}^{I_n \times
+R}\)</span> for <span class="math inline">\(n=1,\dots, N\)</span>. In
+this case, the mode-n matricized version is given by <span
+class="math display">\[
+\boldsymbol{X}_{(n)} \approx \boldsymbol{A}^{(n)} \boldsymbol \Lambda
+(\boldsymbol{A}^{(N)}  \odot\dots \odot \boldsymbol{A}^{(n+1)}\odot
+\boldsymbol{A}^{(n-1)} \odot \dots \odot \boldsymbol{A}^{(1)})^\top
+\]</span> where <span class="math inline">\(\boldsymbol \Lambda =
+\mathrm{diag}(\boldsymbol \lambda)\)</span></p>
+<h3 id="tensor-rank">Tensor Rank</h3>
+<p><strong>rank</strong>: <span
+class="math inline">\(\mathrm{rank}(\mathcal X)\)</span> is defined as
+the smallest number of rank-one tensors that generates <span
+class="math inline">\(\boldsymbol{\mathcal{X}}\)</span> as their
+sum.</p>
+<ul>
+<li>This is the smallest number of components in an exact CP
+decomposition.</li>
+<li>An exact CP decomposition with <span class="math inline">\(R =
+\mathrm{rank}(\mathcal X)\)</span> components is called the
+<strong><em>rank decomposition</em></strong></li>
+</ul>
+<p><strong>Difference between Matrix Rank &amp; Tensor
+Rank</strong>:</p>
+<ul>
+<li>the rank of a real-valued tensor may actually be different over
+<span class="math inline">\(\mathbb{R}\)</span> and <span
+class="math inline">\(\mathbb{C}\)</span>.</li>
+<li>there is no straightforward algorithm to determine the rank of a
+specific given tensor. In fact, this problem is NP-hard.</li>
+</ul>
+<p><strong>Maximum Rank and Typical Rank</strong>:</p>
+<ul>
+<li><strong>Maximum Rank</strong>: the largest attainable rank</li>
+<li><strong>Typical Rank</strong>: any rank that occurs with probability
+greater than zero</li>
+</ul>
+<h3 id="uniqueness">Uniqueness</h3>
+<p>An interesting property of higher-order tensors is that their
+<strong><em>rank decompositions are oftentimes unique</em></strong>,
+whereas matrix decompositions are not.</p>
+<p>For matrix <span class="math inline">\(\boldsymbol{X} =
+\boldsymbol{AB}^\top\)</span>, if SVD of <span
+class="math inline">\(\boldsymbol{X}\)</span> is <span
+class="math inline">\(\boldsymbol{U\Sigma V}^\top\)</span>, then we can
+choose <span class="math inline">\(\boldsymbol{A} = \boldsymbol{U\Sigma
+W}\)</span> and <span class="math inline">\(\boldsymbol{B} =
+\boldsymbol{VW}\)</span> for any orthogonal matrix<span
+class="math inline">\(\boldsymbol{W}\)</span>.</p>
+<p>The CP decomposition is unique under much weaker conditions. For
+<span class="math inline">\(\boldsymbol{\mathcal{X}}\)</span> <span
+class="math display">\[
+\boldsymbol{\mathcal{X}} \approx [\boldsymbol A, \boldsymbol B,
+\boldsymbol C] = \sum_{r=1}^R \boldsymbol{a}_r \circ \boldsymbol{b}_r
+\circ \boldsymbol{c}_r
+\]</span> Uniqueness means that this is the only possible combination of
+rank-one tensors that sums to <span
+class="math inline">\(\boldsymbol{\mathcal{X}}\)</span>.</p>
+<h3 id="low-rank-approximations-and-the-border-rank">Low-rank
+Approximations and the Border Rank</h3>
+<p>For matrices, a best rank-k approximation is given by the leading k
+factors of the SVD. In other words, let <span
+class="math inline">\(R\)</span> be the rank of a matrix <span
+class="math inline">\(\boldsymbol A\)</span> and assume its SVD is given
+by <span class="math display">\[
+\boldsymbol{A} = \sum_{r=1}^R \sigma_r \boldsymbol{u}_r \circ
+\boldsymbol{v}_r, \text{with}\ \sigma_1 \ge \sigma_2 \ge \dots \ge
+\sigma_R &gt; 0
+\]</span> Then a rank-k approximation that minimizes <span
+class="math inline">\(\|\boldsymbol{A} - \boldsymbol{B} \|\)</span> is
+given by <span class="math display">\[
+\boldsymbol{B} = \sum_{r=1}^k \sigma_r \boldsymbol{u}_r \circ
+\boldsymbol{v}_r
+\]</span> This type of result does not hold true for higher-order
+tensors. In general, though, the problem is more complex. It is possible
+that the best rank-<span class="math inline">\(k\)</span> approximation
+may not even exist.</p>
+<p>In the situation where a best low-rank approximation does not exist,
+it is useful to consider the concept of <strong><em>border
+rank</em></strong>, which is defined as the minimum number of rank-one
+tensors that are sufficient to approximate the given tensor with
+arbitrarily small nonzero error. Mathematically, border rank is defined
+as <span class="math display">\[
+\widetilde{\mathrm{rank}}(\boldsymbol{\mathcal{X}}) = \min \{ r \mid
+\forall \varepsilon &gt;0,
+\exists \mathcal{E},\text{s.t. } \|\mathcal{E}\| &lt; \varepsilon \text{
+and }\mathrm{rank}(\boldsymbol{\mathcal{X}} + \mathcal{E}) = r \}
+\]</span> An obvious condition is that <span class="math display">\[
+\widetilde{\mathrm{rank}}(\boldsymbol{\mathcal{X}}) \le
+\mathrm{rank}(\boldsymbol{\mathcal{X}})
+\]</span></p>
+<h3 id="computing-the-cp-decomposition">Computing the CP
+Decomposition</h3>
+<p><img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220501094922255.png" /></p>
+<h2 id="tucker-decomposition">Tucker Decomposition</h2>
+<p>The Tucker decomposition is a form of <em>higher-order principal
+component analysis</em>. It decomposes a tensor into a core tensor
+multiplied (or transformed) by a matrix along each mode. <span
+class="math display">\[
+\boldsymbol{\mathcal{X}} \approx \boldsymbol{\mathcal{G}} \times_1
+\boldsymbol{A}^{(1)} \times_2 \boldsymbol{A}^{(2)} \dots \times_N
+\boldsymbol{A}^{(N)} =
+\left[\boldsymbol{\mathcal{G}};~\boldsymbol{A}^{(1)},\dots,
+\boldsymbol{A}^{(N)} \right]
+\]</span> in which</p>
+<ul>
+<li><span class="math inline">\(\boldsymbol{A}^{(n)} \in \mathbb{R}^{I_n
+\times R_n},~n=1, \dots ,N\)</span> are <em>factor matrices</em>
+(<em>which are usually orthogonal</em>) and can be thought of as the
+principal components in each mode.</li>
+<li><span class="math inline">\(\boldsymbol{\mathcal{G}} \in
+\mathbb{R}^{R_1 \times R_2\times \dots \times R_N}\)</span> is called
+the <em>core tensor</em> and its entries show the level of interaction
+between the different components.</li>
+</ul>
+<p><strong>Element-wise Form</strong>: <span class="math display">\[
+x_{i_1 i_2 \dots i_N} = g_{r_1 r_2 \dots r_N}
+a_{i_1r_1}^{(1)}  a_{i_2r_2}^{(2)} \cdots  a_{i_Nr_N}^{(N)} \quad
+\text{for}~i_n = 1, \dots, I_n, ~n = 1, \dots, N
+\]</span> <strong>Matricized Form</strong>: <span
+class="math display">\[
+\boldsymbol{X}_{(n)} = \boldsymbol{A}^{(n)} \boldsymbol{G}_{(n)}
+\left(\boldsymbol{A}^{(N)} \otimes \dots \otimes \boldsymbol{A}^{(n+1)}
+\otimes \boldsymbol{A}^{(n-1)} \otimes \dots \otimes
+\boldsymbol{A}^{(1)}\right)^\top
+\]</span></p>
+<ul>
+<li><strong>Tucker2 Decomposition</strong>: <span
+class="math inline">\(\boldsymbol{\mathcal{X}} =
+\boldsymbol{\mathcal{G}} \times_1 \boldsymbol{A} \times_2 \boldsymbol{B}
+=
+[\boldsymbol{\mathcal{G}};~\boldsymbol{A},~\boldsymbol{B},~\boldsymbol{I}]\)</span></li>
+<li><strong>Tucker1 Decomposition</strong>: <span
+class="math inline">\(\boldsymbol{\mathcal{X}} =
+\boldsymbol{\mathcal{G}} \times_1 \boldsymbol{A} =
+[\boldsymbol{\mathcal{G}};~\boldsymbol{A},~\boldsymbol{I},~\boldsymbol{I}]\)</span></li>
+</ul>
+<h3 id="the-n-rank">The <span class="math inline">\(n\)</span>-Rank</h3>
+<ul>
+<li><p>The <em><span class="math inline">\(n\)</span>-rank</em> of <span
+class="math inline">\(\boldsymbol{\mathcal{X}}\)</span>, denoted as
+<span
+class="math inline">\(\mathrm{rank}_n(\boldsymbol{\mathcal{X}})\)</span>,
+is the column rank of <span
+class="math inline">\(\boldsymbol{X}_{(n)}\)</span></p>
+<ul>
+<li>the dimension of the vector space spanned by the mode-<span
+class="math inline">\(n\)</span> fibers</li>
+<li>Let <span class="math inline">\(R_n =
+\mathrm{rank}_n(\boldsymbol{\mathcal{X}})\)</span> for <span
+class="math inline">\(n=1, \dots, N\)</span>, then we can say that <span
+class="math inline">\(\boldsymbol{\mathcal{X}}\)</span> is a rank-<span
+class="math inline">\((R_1, R_2, \dots, R_N)\)</span> tensor.</li>
+<li>Trivially, <span class="math inline">\(R_n \le I_n\)</span> for all
+<span class="math inline">\(n = 1, \dots, N\)</span>.</li>
+</ul></li>
+<li><p>For a given tensor <span
+class="math inline">\(\boldsymbol{\mathcal{X}}\)</span>, we can easily
+find an exact Tucker decomposition of rank-<span
+class="math inline">\((R_1, R_2, \dots, R_N)\)</span> where <span
+class="math inline">\(R_n =
+\mathrm{rank}_n(\boldsymbol{\mathcal{X}})\)</span>.</p>
+<ul>
+<li>If <span class="math inline">\(R_n &lt;
+\mathrm{rank}_n(\boldsymbol{\mathcal{X}})\)</span> for one or more <span
+class="math inline">\(n\)</span>, then it will be necessarily inexact
+and more difficult to compute.</li>
+</ul>
+<p><img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20221122145943297.png" /></p></li>
+</ul>
+<h3 id="computing-the-tucker-decomposition">Computing the Tucker
+Decomposition</h3>
+<ol type="1">
+<li><p><code>HOSVD</code>:</p>
+<p><img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20221122150110063.png" /></p></li>
+<li><p><code>HOOI</code>:</p>
+<p><img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20221122150705926.png" /></p></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/tensor-decomposition/" rel="tag"># tensor decomposition</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/11/28/PIML/" rel="prev" title="Physics-Informed Machine Learning">
+                  <i class="fa fa-chevron-left"></i> Physics-Informed Machine Learning
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hongjue Zhao</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
