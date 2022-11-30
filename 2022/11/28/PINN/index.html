@@ -19,22 +19,19 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.13.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Basic Information Title: Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations Authors: Raissi et al.">
+    <meta name="description" content="Basic Information  Title: Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations Authors: Raissi et al.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PINN">
 <meta property="og:url" content="http://example.com/2022/11/28/PINN/index.html">
 <meta property="og:site_name" content="Hongjue&#39;s Space">
-<meta property="og:description" content="Basic Information Title: Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations Authors: Raissi et al.">
+<meta property="og:description" content="Basic Information  Title: Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations Authors: Raissi et al.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220814115658200.png">
-<meta property="og:image" content="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220814164740696.png">
 <meta property="article:published_time" content="2022-11-28T13:55:56.000Z">
-<meta property="article:modified_time" content="2022-11-28T14:19:24.536Z">
+<meta property="article:modified_time" content="2022-11-30T06:24:34.288Z">
 <meta property="article:author" content="Hongjue Zhao">
 <meta property="article:tag" content="Physics Guided ML">
 <meta property="article:tag" content="PDE Solver">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220814115658200.png">
 
 
 <link rel="canonical" href="http://example.com/2022/11/28/PINN/">
@@ -118,7 +115,12 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-Information"><span class="nav-number">1.</span> <span class="nav-text">Basic Information</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Background-amp-Motivation"><span class="nav-number">2.</span> <span class="nav-text">Background &amp; Motivation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Background"><span class="nav-number">2.1.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Motivation"><span class="nav-number">2.2.</span> <span class="nav-text">Motivation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Main-Contributions-of-This-Work"><span class="nav-number">3.</span> <span class="nav-text">Main Contributions of This Work</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Main-Difference-between-This-Work-amp-Prior-Ones"><span class="nav-number">4.</span> <span class="nav-text">Main Difference between This Work &amp; Prior Ones</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Main-Techniques-amp-Experiments"><span class="nav-number">5.</span> <span class="nav-text">Main Techniques &amp; Experiments</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problems-Setup"><span class="nav-number">5.1.</span> <span class="nav-text">Problems Setup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Driven-Solutions-of-PDEs"><span class="nav-number">5.2.</span> <span class="nav-text">Data-Driven Solutions of PDEs</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Continuous-Time-Model"><span class="nav-number">5.2.1.</span> <span class="nav-text">Continuous Time Model</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Discrete-Time-Model"><span class="nav-number">5.2.2.</span> <span class="nav-text">Discrete Time Model</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Driven-Discovery-of-PDEs"><span class="nav-number">5.3.</span> <span class="nav-text">Data-Driven Discovery of PDEs</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Advantages-amp-Shortcomings"><span class="nav-number">6.</span> <span class="nav-text">Advantages &amp; Shortcomings</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Advantages"><span class="nav-number">6.1.</span> <span class="nav-text">Advantages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shortcomings"><span class="nav-number">6.2.</span> <span class="nav-text">Shortcomings</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-information"><span class="nav-number">1.</span> <span class="nav-text">Basic Information</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#background-motivation"><span class="nav-number">2.</span> <span class="nav-text">Background &amp; Motivation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#background"><span class="nav-number">2.1.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#motivation"><span class="nav-number">2.2.</span> <span class="nav-text">Motivation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#main-contributions-of-this-work"><span class="nav-number">3.</span> <span class="nav-text">Main Contributions of This
+Work</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#main-difference-between-this-work-prior-ones"><span class="nav-number">4.</span> <span class="nav-text">Main Difference
+between This Work &amp; Prior Ones</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#main-techniques-experiments"><span class="nav-number">5.</span> <span class="nav-text">Main Techniques &amp;
+Experiments</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#problems-setup"><span class="nav-number">5.1.</span> <span class="nav-text">Problems Setup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#data-driven-solutions-of-pdes"><span class="nav-number">5.2.</span> <span class="nav-text">Data-Driven Solutions of
+PDEs</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#continuous-time-model"><span class="nav-number">5.2.1.</span> <span class="nav-text">Continuous Time Model</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#discrete-time-model"><span class="nav-number">5.2.2.</span> <span class="nav-text">Discrete Time Model</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#data-driven-discovery-of-pdes"><span class="nav-number">5.3.</span> <span class="nav-text">Data-Driven Discovery of
+PDEs</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#advantages-shortcomings"><span class="nav-number">6.</span> <span class="nav-text">Advantages &amp; Shortcomings</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#advantages"><span class="nav-number">6.1.</span> <span class="nav-text">Advantages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shortcomings"><span class="nav-number">6.2.</span> <span class="nav-text">Shortcomings</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -205,9 +207,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-11-28 21:55:56 / Modified: 22:19:24" itemprop="dateCreated datePublished" datetime="2022-11-28T21:55:56+08:00">2022-11-28</time>
+      <time title="Created: 2022-11-28 21:55:56" itemprop="dateCreated datePublished" datetime="2022-11-28T21:55:56+08:00">2022-11-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-11-30 14:24:34" itemprop="dateModified" datetime="2022-11-30T14:24:34+08:00">2022-11-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -229,76 +237,225 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="Basic-Information"><a href="#Basic-Information" class="headerlink" title="Basic Information"></a>Basic Information</h2><ul>
-<li><strong>Title</strong>: Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations</li>
+        <h2 id="basic-information">Basic Information</h2>
+<ul>
+<li><strong>Title</strong>: Physics-informed neural networks: A deep
+learning framework for solving forward and inverse problems involving
+nonlinear partial differential equations</li>
 <li><strong>Authors</strong>: Raissi et al.</li>
 <li><strong>Pub Date</strong>: 2021-6</li>
-<li><strong>Journal&#x2F;Conference</strong>: Journal of Computational Physics</li>
+<li><strong>Journal/Conference</strong>: Journal of Computational
+Physics</li>
 </ul>
 <span id="more"></span>
-
-<h2 id="Background-amp-Motivation"><a href="#Background-amp-Motivation" class="headerlink" title="Background &amp; Motivation"></a>Background &amp; Motivation</h2><h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><ul>
-<li>in the course of analyzing complex physical, biological or engineering systems, <em><strong>the cost of data acquisition is prohibitive</strong></em>, and we are inevitably faced with the challenge of <em><strong>drawing conclusions and making decisions under partial information</strong></em></li>
-<li>there exists a vast amount of <em>prior knowledge</em> that is currently not being utilized in modern machine learning practice</li>
-</ul>
-<h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><ul>
-<li>use prior information as a <em>regularization agent</em> that constrains the space of admissible solutions to a manageable size</li>
-</ul>
-<h2 id="Main-Contributions-of-This-Work"><a href="#Main-Contributions-of-This-Work" class="headerlink" title="Main Contributions of This Work"></a>Main Contributions of This Work</h2><ul>
-<li>use automatic differentiation to differentiate neural networks with respect to their input coordinates and model parameters</li>
-</ul>
-<h2 id="Main-Difference-between-This-Work-amp-Prior-Ones"><a href="#Main-Difference-between-This-Work-amp-Prior-Ones" class="headerlink" title="Main Difference between This Work &amp; Prior Ones"></a>Main Difference between This Work &amp; Prior Ones</h2><ul>
-<li><strong>Prior Ones</strong>: employ machine learning algorithms merely as <em>black-box tools</em></li>
-<li><strong>This Work</strong>: open the black-box by understanding and appreciating the key role played by <em>automatic differentiation</em></li>
-</ul>
-<h2 id="Main-Techniques-amp-Experiments"><a href="#Main-Techniques-amp-Experiments" class="headerlink" title="Main Techniques &amp; Experiments"></a>Main Techniques &amp; Experiments</h2><h3 id="Problems-Setup"><a href="#Problems-Setup" class="headerlink" title="Problems Setup"></a>Problems Setup</h3><p>$$<br>u_t + \mathcal{N}[u; \lambda] &#x3D;0,\ x \in \Omega,\ t \in [0,T]<br>$$</p>
+<h2 id="background-motivation">Background &amp; Motivation</h2>
+<h3 id="background">Background</h3>
 <ul>
-<li>$u(t,x)$: the latent (hidden) solution</li>
-<li>$\mathcal{N}[\cdot;\lambda]$: nonlinear operator parameterized by $\lambda$</li>
-<li>$\Omega$: subset of $\mathbb{R}^D$</li>
+<li>in the course of analyzing complex physical, biological or
+engineering systems, <strong><em>the cost of data acquisition is
+prohibitive</em></strong>, and we are inevitably faced with the
+challenge of <strong><em>drawing conclusions and making decisions under
+partial information</em></strong></li>
+<li>there exists a vast amount of <em>prior knowledge</em> that is
+currently not being utilized in modern machine learning practice</li>
+</ul>
+<h3 id="motivation">Motivation</h3>
+<ul>
+<li>use prior information as a <em>regularization agent</em> that
+constrains the space of admissible solutions to a manageable size</li>
+</ul>
+<h2 id="main-contributions-of-this-work">Main Contributions of This
+Work</h2>
+<ul>
+<li>use automatic differentiation to differentiate neural networks with
+respect to their input coordinates and model parameters</li>
+</ul>
+<h2 id="main-difference-between-this-work-prior-ones">Main Difference
+between This Work &amp; Prior Ones</h2>
+<ul>
+<li><strong>Prior Ones</strong>: employ machine learning algorithms
+merely as <em>black-box tools</em></li>
+<li><strong>This Work</strong>: open the black-box by understanding and
+appreciating the key role played by <em>automatic
+differentiation</em></li>
+</ul>
+<h2 id="main-techniques-experiments">Main Techniques &amp;
+Experiments</h2>
+<h3 id="problems-setup">Problems Setup</h3>
+<p><span class="math display">\[
+u_t + \mathcal{N}[u; \lambda] =0,\ x \in \Omega,\ t \in [0,T]
+\]</span></p>
+<ul>
+<li><span class="math inline">\(u(t,x)\)</span>: the latent (hidden)
+solution</li>
+<li><span class="math inline">\(\mathcal{N}[\cdot;\lambda]\)</span>:
+nonlinear operator parameterized by <span
+class="math inline">\(\lambda\)</span></li>
+<li><span class="math inline">\(\Omega\)</span>: subset of <span
+class="math inline">\(\mathbb{R}^D\)</span></li>
 </ul>
 <p><strong>Two Problems</strong>:</p>
-<ol>
-<li><em><strong>data-driven solutions of PDEs</strong></em>: given fixed model parameters $\lambda$ what can be said about the unknown hidden state $u(t, x)$ of the system?</li>
-<li><em><strong>data-driven discovery of PDEs</strong></em>: what are the parameters λ that best describe the observed data?</li>
+<ol type="1">
+<li><strong><em>data-driven solutions of PDEs</em></strong>: given fixed
+model parameters <span class="math inline">\(\lambda\)</span> what can
+be said about the unknown hidden state <span class="math inline">\(u(t,
+x)\)</span> of the system?</li>
+<li><strong><em>data-driven discovery of PDEs</em></strong>: what are
+the parameters λ that best describe the observed data?</li>
 </ol>
-<h3 id="Data-Driven-Solutions-of-PDEs"><a href="#Data-Driven-Solutions-of-PDEs" class="headerlink" title="Data-Driven Solutions of PDEs"></a>Data-Driven Solutions of PDEs</h3><h4 id="Continuous-Time-Model"><a href="#Continuous-Time-Model" class="headerlink" title="Continuous Time Model"></a>Continuous Time Model</h4><p>Define $f(t, x)$ as follows:<br>$$<br>f:&#x3D;u_t + \mathcal{N}[u]<br>$$<br>We can use a deep neural network to represent $u(t, x)$. This network can be derived using automatic differentiation. In the meanwhile, it has the same parameters as $f$. </p>
-<p>The shared parameters between $u$ and $f$ can be learned by minimizing the MSE loss:<br>$$<br>\mathrm{MSE} &#x3D; \mathrm{MSE}_u + \mathrm{MSE}_f<br>$$<br>in which<br>$$<br>\mathrm{MSE}<em>u &#x3D; \frac{1}{N_u}\sum</em>{i&#x3D;1}^{N_u} |u(t_u^i, x_u^i) - u^i|^2<br>$$</p>
+<h3 id="data-driven-solutions-of-pdes">Data-Driven Solutions of
+PDEs</h3>
+<h4 id="continuous-time-model">Continuous Time Model</h4>
+<p>Define <span class="math inline">\(f(t, x)\)</span> as follows: <span
+class="math display">\[
+f:=u_t + \mathcal{N}[u]
+\]</span> We can use a deep neural network to represent <span
+class="math inline">\(u(t, x)\)</span>. This network can be derived
+using automatic differentiation. In the meanwhile, it has the same
+parameters as <span class="math inline">\(f\)</span>.</p>
+<p>The shared parameters between <span class="math inline">\(u\)</span>
+and <span class="math inline">\(f\)</span> can be learned by minimizing
+the MSE loss: <span class="math display">\[
+\mathrm{MSE} = \mathrm{MSE}_u + \mathrm{MSE}_f
+\]</span> in which</p>
+<p><span class="math display">\[
+\mathrm{MSE}_u = \frac{1}{N_u}\sum_{i=1}^{N_u} |u(t_u^i, x_u^i) - u^i|^2
+\]</span></p>
 <ul>
-<li>${t_u^i, x_u^i, u^i}^{N_u}_{i&#x3D;1}$: initial and boundary training data on $u(t,x)$</li>
+<li><span class="math inline">\(\{t_u^i, x_u^i,
+u^i\}^{N_u}_{i=1}\)</span>: initial and boundary training data on <span
+class="math inline">\(u(t,x)\)</span></li>
 <li>corresponds to the initial and boundary data</li>
 </ul>
-<p>$$<br>\mathrm{MSE}<em>f &#x3D; \frac{1}{N_f}\sum</em>{i&#x3D;1}^{N_f} |f(t_f^i, x_f^i)|^2<br>$$</p>
+<p><span class="math display">\[
+\mathrm{MSE}_f = \frac{1}{N_f}\sum_{i=1}^{N_f} |f(t_f^i, x_f^i)|^2
+\]</span></p>
 <ul>
-<li>${t_f^i, x_f^i}^{N_f}_{i&#x3D;1}$: collocations points for $f(t,x)$</li>
-<li>enforces the structure imposed by PDE at a finite set of collocation points</li>
+<li><span class="math inline">\(\{t_f^i, x_f^i\}^{N_f}_{i=1}\)</span>:
+collocations points for <span class="math inline">\(f(t,x)\)</span></li>
+<li>enforces the structure imposed by PDE at a finite set of collocation
+points</li>
 </ul>
-<p><strong>Example: Schrodinger equation</strong><br>$$<br>\begin{aligned}<br>&amp;ih_t + 0.5h_{xx} + |h|^2h &#x3D; 0, x \in [-5, 5], t \in [0, \pi&#x2F;2],\<br>&amp;h(t, -5) &#x3D; h(t, 5), h_x(t, -5) &#x3D; h_x(t, 5),\<br>&amp;h(0, x) &#x3D; 2 \mathrm{sech} (x)<br>\end{aligned}<br>$$<br>Let’s define:<br>$$<br>f :&#x3D; ih_t + 0.5h_{xx} + |h|^2h<br>$$<br>in which $h(t,x) &#x3D; [u(t, x), v(t, x)]$. For loss:<br>$$<br>\begin{aligned}<br>\mathrm{MSE} &amp;&#x3D; \mathrm{MSE}_0 + \mathrm{MSE}_b + \mathrm{MSE}_f,\<br>\mathrm{MSE}<em>0 &amp;&#x3D; \frac{1}{N_0} \sum</em>{i&#x3D;1}^{N_0} |h(0, x_0^i) -h_0^i|^2,\<br>\mathrm{MSE}<em>b &amp;&#x3D; \frac{1}{N_b} \sum</em>{i&#x3D;1}^{N_b} \left( |h^i(t_b^i, -5) -h^i(t_b^i, 5) |^2 + |h_x^i(t_b^i, -5) -h_x^i(t_b^i, 5) |^2 \right),\<br>\mathrm{MSE}<em>f &amp;&#x3D; \frac{1}{N_f} \sum</em>{i&#x3D;1}^{N_f} |f(t_f^i, x_f^i)|^2,<br>\end{aligned}<br>$$<br><img src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220814115658200.png" alt="image-20220814115658200"></p>
-<h4 id="Discrete-Time-Model"><a href="#Discrete-Time-Model" class="headerlink" title="Discrete Time Model"></a>Discrete Time Model</h4><p>Let us apply the general form of Runge–Kutta methods with q stages:<br>$$<br>\begin{aligned}<br>u^{n+c_i} &amp;&#x3D; u^n - \Delta t \sum_{j&#x3D;1}^q a_{ij} \mathcal{N}[u^{n+c_j}], \quad i &#x3D; 1, \dots, q,\<br>u^{n+1} &amp;&#x3D; u^n - \Delta t \sum_{j&#x3D;1}^q b_j \mathcal{N}[u^{n+c_j}].<br>\end{aligned}<br>$$<br>Last equation can be equivalently expressed as<br>$$<br>\begin{aligned}<br>u^n &amp;&#x3D; u^n_i, \quad i &#x3D; 1, \dots, q,\<br>u^n &amp;&#x3D; u^n_{q+1}<br>\end{aligned}<br>$$<br>where<br>$$<br>\begin{aligned}<br>u^n_i &amp;:&#x3D; u^{n+c_i} + \Delta t \sum_{j&#x3D;1}^q a_{ij} \mathcal{N}[u^{n+c_j}]\<br>u^n_{q+1} &amp;:&#x3D; u^{n+1} + \Delta t \sum_{j&#x3D;1}^q b_j \mathcal{N}[u^{n+c_j}]<br>\end{aligned}<br>$$<br>We proceed by placing a multi-output neural network prior on<br>$$<br>[u^{n+c_1}(x), \dots, u^{n+c_q}(x), u^{n+1}(x)]<br>$$<br>This prior assumption along with discrete PDE result in a physics-informed neural network that takes x as an input and outputs<br>$$<br>[u^n_1(x), \dots, u_q^n(x), u_{q+1}^n(x)]<br>$$<br><strong>Example: Allen–Cahn equation</strong><br>$$<br>\begin{aligned}<br>&amp;u_t - 0.0001u_{xx} + 5u^3 - 5u &#x3D; 0,\<br>&amp;u(0, x) &#x3D; x^2 \cos(\pi x),\<br>&amp;u(t,-1) &#x3D; u(t, 1),\<br>&amp;u_x(t, -1) &#x3D; u_x(t, 1).<br>\end{aligned}<br>$$<br>Here<br>$$<br>\mathcal{N}[u^{n+c_j}] &#x3D; -0.0001 u_{xx}^{n+c_j} + 5(u^{n+c_j})^3 - 5u^{n+c_j}<br>$$<br>and<br>$$<br>\begin{aligned}<br>\mathrm{SSE} &amp;&#x3D; \mathrm{SSE}<em>n + \mathrm{SSE}<em>b\<br>\mathrm{SSE}<em>n &amp;&#x3D; \sum</em>{j&#x3D;1}^{q+1} \sum</em>{i&#x3D;1}^{N_n}|u</em>{j}^n(x^{n,i}) - u^{n,i}|^2\<br>\mathrm{SSE}<em>b &amp;&#x3D; \sum</em>{i&#x3D;1}^q |u^{n+c_i}(-1) - u^{n+c_i}(1) |^2 + |u^{n+1}(-1) - u^{n+1}(1) |^2\<br>&amp;+ \sum_{i&#x3D;1}^q |u^{n+c_i}_x(-1) - u^{n+c_i}_x(1) |^2 + |u^{n+1}_x(-1) - u^{n+1}_x(1) |^2<br>\end{aligned}<br>$$<br><img src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220814164740696.png" alt="image-20220814164740696"></p>
-<h3 id="Data-Driven-Discovery-of-PDEs"><a href="#Data-Driven-Discovery-of-PDEs" class="headerlink" title="Data-Driven Discovery of PDEs"></a>Data-Driven Discovery of PDEs</h3><ul>
+<p><strong>Example: Schrodinger equation</strong> <span
+class="math display">\[
+\begin{aligned}
+&amp;ih_t + 0.5h_{xx} + |h|^2h = 0, x \in [-5, 5], t \in [0, \pi/2],\\
+&amp;h(t, -5) = h(t, 5), h_x(t, -5) = h_x(t, 5),\\
+&amp;h(0, x) = 2 \mathrm{sech} (x)
+\end{aligned}
+\]</span> Let’s define: <span class="math display">\[
+f := ih_t + 0.5h_{xx} + |h|^2h
+\]</span> in which <span class="math inline">\(h(t,x) = [u(t, x), v(t,
+x)]\)</span>. For loss: <span class="math display">\[
+\begin{aligned}
+\mathrm{MSE} &amp;= \mathrm{MSE}_0 + \mathrm{MSE}_b + \mathrm{MSE}_f,\\
+\mathrm{MSE}_0 &amp;= \frac{1}{N_0} \sum_{i=1}^{N_0} |h(0, x_0^i)
+-h_0^i|^2,\\
+\mathrm{MSE}_b &amp;= \frac{1}{N_b} \sum_{i=1}^{N_b} \left( |h^i(t_b^i,
+-5) -h^i(t_b^i, 5) |^2 + |h_x^i(t_b^i, -5) -h_x^i(t_b^i, 5) |^2
+\right),\\
+\mathrm{MSE}_f &amp;= \frac{1}{N_f} \sum_{i=1}^{N_f} |f(t_f^i,
+x_f^i)|^2,
+\end{aligned}
+\]</span> <img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220814115658200.png"
+alt="image-20220814115658200" /></p>
+<h4 id="discrete-time-model">Discrete Time Model</h4>
+<p>Let us apply the general form of Runge–Kutta methods with q stages:
+<span class="math display">\[
+\begin{aligned}
+u^{n+c_i} &amp;= u^n - \Delta t \sum_{j=1}^q a_{ij}
+\mathcal{N}[u^{n+c_j}], \quad i = 1, \dots, q,\\
+u^{n+1} &amp;= u^n - \Delta t \sum_{j=1}^q b_j \mathcal{N}[u^{n+c_j}].
+\end{aligned}
+\]</span> Last equation can be equivalently expressed as <span
+class="math display">\[
+\begin{aligned}
+u^n &amp;= u^n_i, \quad i = 1, \dots, q,\\
+u^n &amp;= u^n_{q+1}
+\end{aligned}
+\]</span> where <span class="math display">\[
+\begin{aligned}
+u^n_i &amp;:= u^{n+c_i} + \Delta t \sum_{j=1}^q a_{ij}
+\mathcal{N}[u^{n+c_j}]\\
+u^n_{q+1} &amp;:= u^{n+1} + \Delta t \sum_{j=1}^q b_j
+\mathcal{N}[u^{n+c_j}]
+\end{aligned}
+\]</span> We proceed by placing a multi-output neural network prior on
+<span class="math display">\[
+[u^{n+c_1}(x), \dots, u^{n+c_q}(x), u^{n+1}(x)]
+\]</span> This prior assumption along with discrete PDE result in a
+physics-informed neural network that takes x as an input and outputs
+<span class="math display">\[
+[u^n_1(x), \dots, u_q^n(x), u_{q+1}^n(x)]
+\]</span> <strong>Example: Allen–Cahn equation</strong><br />
+<span class="math display">\[
+\begin{aligned}
+&amp;u_t - 0.0001u_{xx} + 5u^3 - 5u = 0,\\
+&amp;u(0, x) = x^2 \cos(\pi x),\\
+&amp;u(t,-1) = u(t, 1),\\
+&amp;u_x(t, -1) = u_x(t, 1).
+\end{aligned}
+\]</span> Here <span class="math display">\[
+\mathcal{N}[u^{n+c_j}] = -0.0001 u_{xx}^{n+c_j} + 5(u^{n+c_j})^3 -
+5u^{n+c_j}
+\]</span> and <span class="math display">\[
+\begin{aligned}
+\mathrm{SSE} &amp;= \mathrm{SSE}_n + \mathrm{SSE}_b\\
+\mathrm{SSE}_n &amp;= \sum_{j=1}^{q+1} \sum_{i=1}^{N_n}|u_{j}^n(x^{n,i})
+- u^{n,i}|^2\\
+\mathrm{SSE}_b &amp;= \sum_{i=1}^q |u^{n+c_i}(-1) - u^{n+c_i}(1) |^2 +
+|u^{n+1}(-1) - u^{n+1}(1) |^2\\
+&amp;+ \sum_{i=1}^q |u^{n+c_i}_x(-1) - u^{n+c_i}_x(1) |^2 +
+|u^{n+1}_x(-1) - u^{n+1}_x(1) |^2
+\end{aligned}
+\]</span> <img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220814164740696.png"
+alt="image-20220814164740696" /></p>
+<h3 id="data-driven-discovery-of-pdes">Data-Driven Discovery of
+PDEs</h3>
+<ul>
 <li>The whole process is similar to data-driven solution of PDEs.</li>
-<li>generate data set from exact solution, then according to MSE loss mentioned above, optimize and get unknown parameters</li>
+<li>generate data set from exact solution, then according to MSE loss
+mentioned above, optimize and get unknown parameters</li>
 </ul>
-<h2 id="Advantages-amp-Shortcomings"><a href="#Advantages-amp-Shortcomings" class="headerlink" title="Advantages &amp; Shortcomings"></a>Advantages &amp; Shortcomings</h2><h3 id="Advantages"><a href="#Advantages" class="headerlink" title="Advantages"></a>Advantages</h3><ul>
-<li>use neural networks as the PDEs’ solution approximator, which have excellent performance in nonlinear function approximation.</li>
-<li>first use auto differential tools into computational physics creatively, and make the whole model partially explainable</li>
-<li>use customized loss function as soft penalty to lead the training process of neural networks, which make it can be generalized to more problems</li>
+<h2 id="advantages-shortcomings">Advantages &amp; Shortcomings</h2>
+<h3 id="advantages">Advantages</h3>
+<ul>
+<li>use neural networks as the PDEs’ solution approximator, which have
+excellent performance in nonlinear function approximation.</li>
+<li>first use auto differential tools into computational physics
+creatively, and make the whole model partially explainable</li>
+<li>use customized loss function as soft penalty to lead the training
+process of neural networks, which make it can be generalized to more
+problems</li>
 </ul>
-<h3 id="Shortcomings"><a href="#Shortcomings" class="headerlink" title="Shortcomings"></a>Shortcomings</h3><ul>
-<li>the accuracy is still very large ($10^{-3}$)</li>
+<h3 id="shortcomings">Shortcomings</h3>
+<ul>
+<li>the accuracy is still very large (<span
+class="math inline">\(10^{-3}\)</span>)</li>
 <li>this kind of method still remains inexplicability</li>
 </ul>
 <blockquote>
-<p>Although a series of promising results was presented, the reader may perhaps agree this work creates more questions than it answers. </p>
+<p>Although a series of promising results was presented, the reader may
+perhaps agree this work creates more questions than it answers.</p>
 <ul>
-<li>How deep&#x2F;wide should the neural network be? </li>
-<li>How much data is really needed? </li>
-<li>Why does the algorithm converge to unique values for the parameters of the differential operators, i.e., why is the algorithm not suffering from local optima for the parameters of the differential operator? </li>
-<li>Does the network suffer from vanishing gradients for deeper architectures and higher order differential operators? </li>
-<li>Could this be mitigated by using different activation functions? </li>
-<li>Can we improve on initializing the network weights or normalizing the data? </li>
-<li>Are the mean square error and the sum of squared errors the appropriate loss functions? Why are these methods seemingly so robust to noise in the data? </li>
-<li>How can we quantify the uncertainty associated with our predictions?</li>
+<li>How deep/wide should the neural network be?</li>
+<li>How much data is really needed?</li>
+<li>Why does the algorithm converge to unique values for the parameters
+of the differential operators, i.e., why is the algorithm not suffering
+from local optima for the parameters of the differential operator?</li>
+<li>Does the network suffer from vanishing gradients for deeper
+architectures and higher order differential operators?</li>
+<li>Could this be mitigated by using different activation
+functions?</li>
+<li>Can we improve on initializing the network weights or normalizing
+the data?</li>
+<li>Are the mean square error and the sum of squared errors the
+appropriate loss functions? Why are these methods seemingly so robust to
+noise in the data?</li>
+<li>How can we quantify the uncertainty associated with our
+predictions?</li>
 </ul>
 </blockquote>
 

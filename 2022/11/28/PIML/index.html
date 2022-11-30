@@ -19,23 +19,21 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.13.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Basic Information Title: Physics Informed Machine Learning Authors: Karniadakis et al. Pub Date: 2021-6 Journal&#x2F;Conference: Nature Reviews Physics">
+    <meta name="description" content="Basic Information  Title: Physics Informed Machine Learning Authors: Karniadakis et al. Pub Date: 2021-6 Journal&#x2F;Conference: Nature Reviews Physics">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Physics-Informed Machine Learning">
 <meta property="og:url" content="http://example.com/2022/11/28/PIML/index.html">
 <meta property="og:site_name" content="Hongjue&#39;s Space">
-<meta property="og:description" content="Basic Information Title: Physics Informed Machine Learning Authors: Karniadakis et al. Pub Date: 2021-6 Journal&#x2F;Conference: Nature Reviews Physics">
+<meta property="og:description" content="Basic Information  Title: Physics Informed Machine Learning Authors: Karniadakis et al. Pub Date: 2021-6 Journal&#x2F;Conference: Nature Reviews Physics">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220804204243565.png">
 <meta property="og:image" content="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220805100417442.png">
-<meta property="og:image" content="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220805230212253.png">
 <meta property="article:published_time" content="2022-11-28T14:11:01.000Z">
 <meta property="article:modified_time" content="2022-11-28T14:17:32.002Z">
 <meta property="article:author" content="Hongjue Zhao">
 <meta property="article:tag" content="PGML">
 <meta property="article:tag" content="Overview">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220804204243565.png">
+<meta name="twitter:image" content="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220805100417442.png">
 
 
 <link rel="canonical" href="http://example.com/2022/11/28/PIML/">
@@ -119,7 +117,12 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-Information"><span class="nav-number">1.</span> <span class="nav-text">Basic Information</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">2.</span> <span class="nav-text">Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Background"><span class="nav-number">2.1.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ML"><span class="nav-number">2.2.</span> <span class="nav-text">ML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Physics-Informed-Machine-Learning"><span class="nav-number">2.3.</span> <span class="nav-text">Physics Informed Machine Learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-Embed-Physics-in-ML"><span class="nav-number">3.</span> <span class="nav-text">How to Embed Physics in ML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Observational-Biases"><span class="nav-number">3.1.</span> <span class="nav-text">Observational Biases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Inductive-Biases"><span class="nav-number">3.2.</span> <span class="nav-text">Inductive Biases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Learning-Biases"><span class="nav-number">3.3.</span> <span class="nav-text">Learning Biases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Connections-to-Kernel-Methods-amp-Classical-Numerical-Methods"><span class="nav-number">3.4.</span> <span class="nav-text">Connections to Kernel Methods &amp; Classical Numerical Methods</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Merits-of-Physics-Informed-ML"><span class="nav-number">4.</span> <span class="nav-text">Merits of Physics-Informed ML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Incomplete-Models-and-Imperfect-Data"><span class="nav-number">4.1.</span> <span class="nav-text">Incomplete Models and Imperfect Data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Strong-generalization-in-small-data-regime"><span class="nav-number">4.2.</span> <span class="nav-text">Strong generalization in small data regime</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Understanding-Deep-Learning"><span class="nav-number">4.3.</span> <span class="nav-text">Understanding Deep Learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tackling-High-Dimensionality"><span class="nav-number">4.4.</span> <span class="nav-text">Tackling High Dimensionality</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Uncertainty-quantification"><span class="nav-number">4.5.</span> <span class="nav-text">Uncertainty quantification</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Applications"><span class="nav-number">5.</span> <span class="nav-text">Applications</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples"><span class="nav-number">5.1.</span> <span class="nav-text">Examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Software"><span class="nav-number">5.2.</span> <span class="nav-text">Software</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Which-Model"><span class="nav-number">5.3.</span> <span class="nav-text">Which Model?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Current-Limitations"><span class="nav-number">6.</span> <span class="nav-text">Current Limitations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Future-Directions"><span class="nav-number">7.</span> <span class="nav-text">Future Directions</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-information"><span class="nav-number">1.</span> <span class="nav-text">Basic Information</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction"><span class="nav-number">2.</span> <span class="nav-text">Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#background"><span class="nav-number">2.1.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ml"><span class="nav-number">2.2.</span> <span class="nav-text">ML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#physics-informed-machine-learning"><span class="nav-number">2.3.</span> <span class="nav-text">Physics Informed Machine
+Learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#how-to-embed-physics-in-ml"><span class="nav-number">3.</span> <span class="nav-text">How to Embed Physics in ML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#observational-biases"><span class="nav-number">3.1.</span> <span class="nav-text">Observational Biases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inductive-biases"><span class="nav-number">3.2.</span> <span class="nav-text">Inductive Biases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#learning-biases"><span class="nav-number">3.3.</span> <span class="nav-text">Learning Biases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#connections-to-kernel-methods-classical-numerical-methods"><span class="nav-number">3.4.</span> <span class="nav-text">Connections
+to Kernel Methods &amp; Classical Numerical Methods</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#merits-of-physics-informed-ml"><span class="nav-number">4.</span> <span class="nav-text">Merits of Physics-Informed
+ML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#incomplete-models-and-imperfect-data"><span class="nav-number">4.1.</span> <span class="nav-text">Incomplete Models and
+Imperfect Data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#strong-generalization-in-small-data-regime"><span class="nav-number">4.2.</span> <span class="nav-text">Strong
+generalization in small data regime</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#understanding-deep-learning"><span class="nav-number">4.3.</span> <span class="nav-text">Understanding Deep Learning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tackling-high-dimensionality"><span class="nav-number">4.4.</span> <span class="nav-text">Tackling High Dimensionality</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uncertainty-quantification"><span class="nav-number">4.5.</span> <span class="nav-text">Uncertainty quantification</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#applications"><span class="nav-number">5.</span> <span class="nav-text">Applications</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#examples"><span class="nav-number">5.1.</span> <span class="nav-text">Examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#software"><span class="nav-number">5.2.</span> <span class="nav-text">Software</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#which-model"><span class="nav-number">5.3.</span> <span class="nav-text">Which Model?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#current-limitations"><span class="nav-number">6.</span> <span class="nav-text">Current Limitations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#future-directions"><span class="nav-number">7.</span> <span class="nav-text">Future Directions</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -230,163 +233,269 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="Basic-Information"><a href="#Basic-Information" class="headerlink" title="Basic Information"></a>Basic Information</h2><ul>
+        <h2 id="basic-information">Basic Information</h2>
+<ul>
 <li><strong>Title</strong>: Physics Informed Machine Learning</li>
 <li><strong>Authors</strong>: Karniadakis et al.</li>
 <li><strong>Pub Date</strong>: 2021-6</li>
-<li><strong>Journal&#x2F;Conference</strong>: Nature Reviews Physics</li>
+<li><strong>Journal/Conference</strong>: Nature Reviews Physics</li>
 </ul>
 <span id="more"></span>
-
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><ul>
-<li><p><strong>Main theme</strong>: Modeling and forecasting the dynamics of multiphysics and multiscale systems</p>
-</li>
-<li><p><strong>Methods Now</strong>: numerically solving PDEs, such as using <em>finite differences, finite elements, spectral and mesh methods</em></p>
-</li>
+<h2 id="introduction">Introduction</h2>
+<h3 id="background">Background</h3>
+<ul>
+<li><p><strong>Main theme</strong>: Modeling and forecasting the
+dynamics of multiphysics and multiscale systems</p></li>
+<li><p><strong>Methods Now</strong>: numerically solving PDEs, such as
+using <em>finite differences, finite elements, spectral and mesh
+methods</em></p></li>
 <li><p><strong>Problems</strong>:</p>
 <ul>
-<li>solving inverse problems (<em>inferring material properties in functional materials or discovering missing physics in reactive transport</em>)</li>
-<li>solving real-life physical problems with missing, gappy, or noisy boundary conditions</li>
-</ul>
-</li>
+<li>solving inverse problems (<em>inferring material properties in
+functional materials or discovering missing physics in reactive
+transport</em>)</li>
+<li>solving real-life physical problems with missing, gappy, or noisy
+boundary conditions</li>
+</ul></li>
 </ul>
 <!-- more-->
-
-<h3 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h3><ul>
-<li><strong>Background</strong>: Observation data can play an important role and a wealth of multi-fidelity observations is ready thanks to trillions of sensors</li>
-<li><strong>Advantages of ML</strong>: ML can explore massive design spaces, identity multi-dimensional correlations, and manage ill-posed problems<ul>
-<li>Especially, DL approaches can extract features from massive amounts of multi-fidelity observational data</li>
-</ul>
-</li>
-<li><strong>Problems of ML</strong>:<ul>
-<li>unable to extract interpretable information and knowledge from data</li>
-<li>extrapolation or observational biases may lead to poor generalization<br>performance</li>
-</ul>
-</li>
-</ul>
-<h3 id="Physics-Informed-Machine-Learning"><a href="#Physics-Informed-Machine-Learning" class="headerlink" title="Physics Informed Machine Learning"></a>Physics Informed Machine Learning</h3><ul>
-<li><p><strong>Background</strong>: </p>
+<h3 id="ml">ML</h3>
 <ul>
-<li><p>the ability to collect and create observational data far outpaces the ability to assimilate it sensibly, let alone understand it</p>
-<p><img src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220804204243565.png" alt="image-20220804204243565"></p>
-</li>
-<li><p>We need methods to integrate fundamental physical laws and domain knowledge by teaching ML models about governing physical rules</p>
-</li>
-</ul>
-</li>
-<li><p><strong>Motivation</strong>:  </p>
+<li><strong>Background</strong>: Observation data can play an important
+role and a wealth of multi-fidelity observations is ready thanks to
+trillions of sensors</li>
+<li><strong>Advantages of ML</strong>: ML can explore massive design
+spaces, identity multi-dimensional correlations, and manage ill-posed
+problems
 <ul>
-<li>prior knowledge stemming from our observational, empirical, physical, or mathematical understanding of the world can be leveraged to improve the performance of a learning algorithm</li>
-<li>yield more interpretable ML methods that remain robust in presence of imperfect data</li>
+<li>Especially, DL approaches can extract features from massive amounts
+of multi-fidelity observational data</li>
+</ul></li>
+<li><strong>Problems of ML</strong>:
+<ul>
+<li>unable to extract interpretable information and knowledge from
+data</li>
+<li>extrapolation or observational biases may lead to poor
+generalization performance</li>
+</ul></li>
 </ul>
-</li>
+<h3 id="physics-informed-machine-learning">Physics Informed Machine
+Learning</h3>
+<ul>
+<li><p><strong>Background</strong>:</p>
+<ul>
+<li><p>the ability to collect and create observational data far outpaces
+the ability to assimilate it sensibly, let alone understand it</p>
+<figure>
+<img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220804204243565.png"
+alt="image-20220804204243565" />
+<figcaption aria-hidden="true">image-20220804204243565</figcaption>
+</figure></li>
+<li><p>We need methods to integrate fundamental physical laws and domain
+knowledge by teaching ML models about governing physical rules</p></li>
+</ul></li>
+<li><p><strong>Motivation</strong>:</p>
+<ul>
+<li>prior knowledge stemming from our observational, empirical,
+physical, or mathematical understanding of the world can be leveraged to
+improve the performance of a learning algorithm</li>
+<li>yield more interpretable ML methods that remain robust in presence
+of imperfect data</li>
+</ul></li>
 <li><p><strong>Advantages of PINN</strong>:</p>
 <ul>
-<li>PINN <strong>integrates seamlessly data and mathematical physics models</strong>, even in partially understood, uncertain, and high-dimensional contexts</li>
-<li>Kernel-based or neural network-based regression methods offer effective, simple, and meshless implementations</li>
-<li>PINNs are effective and efficient for <strong>ill-posed and inverse problems</strong>, and combined with domain decomposition are scalable to large problems</li>
+<li>PINN <strong>integrates seamlessly data and mathematical physics
+models</strong>, even in partially understood, uncertain, and
+high-dimensional contexts</li>
+<li>Kernel-based or neural network-based regression methods offer
+effective, simple, and meshless implementations</li>
+<li>PINNs are effective and efficient for <strong>ill-posed and inverse
+problems</strong>, and combined with domain decomposition are scalable
+to large problems</li>
+</ul></li>
 </ul>
-</li>
+<h2 id="how-to-embed-physics-in-ml">How to Embed Physics in ML</h2>
+<p><img src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220805100417442.png" alt="image-20220805100417442" style="zoom:80%;" /></p>
+<h3 id="observational-biases">Observational Biases</h3>
+<ul>
+<li>introduced through <strong>data</strong> that embody the underlying
+physics or carefully crafted data augmentation procedures</li>
+<li><strong>Problem</strong>: a lot of data is needed to reinforce
+biases and generate predictions that <strong>respect certain symmetries
+and conservation laws</strong>, which may be very difficult to get</li>
 </ul>
-<h2 id="How-to-Embed-Physics-in-ML"><a href="#How-to-Embed-Physics-in-ML" class="headerlink" title="How to Embed Physics in ML"></a>How to Embed Physics in ML</h2><img src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220805100417442.png" alt="image-20220805100417442" style="zoom:80%;" />
-
-<h3 id="Observational-Biases"><a href="#Observational-Biases" class="headerlink" title="Observational Biases"></a>Observational Biases</h3><ul>
-<li>introduced through <strong>data</strong> that embody the underlying physics or carefully crafted data augmentation procedures</li>
-<li><strong>Problem</strong>: a lot of data is needed to reinforce biases and generate predictions that <strong>respect certain symmetries and conservation laws</strong>, which may be very difficult to get</li>
+<h3 id="inductive-biases">Inductive Biases</h3>
+<ul>
+<li>design <strong>specialized NN architectures</strong> that embed
+prior knowledge, typically expressed in the form of certain mathematical
+constraints.</li>
+<li><strong>Examples</strong>:
+<ul>
+<li>CV tasks involving medical images, climate pattern segmentation, and
+others based on CNNs (generalized to symmetry transformations)</li>
+<li>covariant NNs tailored to conform with the rotation and translation
+invariances present in many body systems</li>
+<li>other built-in blocks: anti-symmetry, Galilean invariance, the
+symplectic structure of the underlying Hamiltonian system</li>
+<li>special modified architectures to satisfy exactly the required
+initial conditions</li>
+</ul></li>
+<li><strong>Problem</strong>: may be limited to accounting for
+relatively simple symmetry groups</li>
 </ul>
-<h3 id="Inductive-Biases"><a href="#Inductive-Biases" class="headerlink" title="Inductive Biases"></a>Inductive Biases</h3><ul>
-<li>design <strong>specialized NN architectures</strong> that embed prior knowledge, typically expressed in the form of certain mathematical constraints.</li>
-<li><strong>Examples</strong>:<ul>
-<li>CV tasks involving medical images, climate pattern segmentation, and others based on CNNs (generalized to symmetry transformations)</li>
-<li>covariant NNs tailored to conform with the rotation and translation invariances present in many body systems</li>
-<li>other built-in blocks: anti-symmetry, Galilean invariance, the symplectic structure of the underlying Hamiltonian system</li>
-<li>special modified architectures to satisfy exactly the required initial conditions</li>
+<h3 id="learning-biases">Learning Biases</h3>
+<ul>
+<li>introduced by appropriate choice of loss functions, constraints, and
+inference algorithms</li>
+<li><strong>Examples</strong>: Deep Galerkin Method, PINNs, constrained
+GAN, physics-informed auto-encoders (preserve Lyapunov stability),
+InvNet</li>
+<li>solutions obtained via optimization with such soft penalty
+constraints and regularization can be viewed as equivalent to the
+maximum a-posteriori estimate of a Bayesian formulation stemming from
+physics-based likelihood assumptions</li>
 </ul>
-</li>
-<li><strong>Problem</strong>: may be limited to accounting for relatively simple symmetry groups</li>
+<h3
+id="connections-to-kernel-methods-classical-numerical-methods">Connections
+to Kernel Methods &amp; Classical Numerical Methods</h3>
+<ul>
+<li><strong>Connections to Kernel Methods</strong>:
+<ul>
+<li>NN methods can be interpreted as kernel methods in which the
+<em>underlying warping kernel is also learned from data</em></li>
+<li>analyzing NN models through the lens of kernel methods could have
+considerable benefits</li>
+</ul></li>
+<li><strong>Connections to Classical Numerical Methods</strong>:
+<ul>
+<li>many modern deep learning models can be viewed and analyzed by
+observing an obvious correspondence and specific connections to many of
+these classical algorithms</li>
+<li>Examples:
+<ul>
+<li>CNNs —— finite different stencils in translationally equivariant PDE
+discretizations</li>
+<li>residual NNs —— basic forward Euler discretization of autonomous
+ordinary differential equations</li>
+<li>DNNs with the ReLU activation function —— continuous piecewise
+linear functions from the linear finite-element method</li>
+</ul></li>
+</ul></li>
 </ul>
-<h3 id="Learning-Biases"><a href="#Learning-Biases" class="headerlink" title="Learning Biases"></a>Learning Biases</h3><ul>
-<li>introduced by appropriate choice of loss functions, constraints, and inference algorithms</li>
-<li><strong>Examples</strong>: Deep Galerkin Method, PINNs, constrained GAN, physics-informed auto-encoders (preserve Lyapunov stability), InvNet</li>
-<li>solutions obtained via optimization with such soft penalty constraints and regularization can be viewed as equivalent to the maximum a-posteriori estimate of a Bayesian formulation stemming from physics-based likelihood assumptions</li>
-</ul>
-<h3 id="Connections-to-Kernel-Methods-amp-Classical-Numerical-Methods"><a href="#Connections-to-Kernel-Methods-amp-Classical-Numerical-Methods" class="headerlink" title="Connections to Kernel Methods &amp; Classical Numerical Methods"></a>Connections to Kernel Methods &amp; Classical Numerical Methods</h3><ul>
-<li><strong>Connections to Kernel Methods</strong>:<ul>
-<li>NN methods can be interpreted as kernel methods in which the <em>underlying warping kernel is also learned from data</em></li>
-<li>analyzing NN models through the lens of kernel methods could have considerable benefits</li>
-</ul>
-</li>
-<li><strong>Connections to Classical Numerical Methods</strong>:<ul>
-<li>many modern deep learning models can be viewed and analyzed by observing an obvious correspondence and specific connections to many of these classical algorithms</li>
-<li>Examples: <ul>
-<li>CNNs —— finite different stencils in translationally equivariant PDE discretizations</li>
-<li>residual NNs —— basic forward Euler discretization of autonomous ordinary differential equations</li>
-<li>DNNs with the ReLU activation function —— continuous piecewise linear functions from the linear finite-element method</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Merits-of-Physics-Informed-ML"><a href="#Merits-of-Physics-Informed-ML" class="headerlink" title="Merits of Physics-Informed ML"></a>Merits of Physics-Informed ML</h2><ul>
+<h2 id="merits-of-physics-informed-ml">Merits of Physics-Informed
+ML</h2>
+<ul>
 <li>PINNs: solving <strong>ill-posed and inverse problems</strong></li>
-<li>existing numerical grid-based solvers: <strong>forward, well-posed problems</strong> that do not require any data assimilation</li>
+<li>existing numerical grid-based solvers: <strong>forward, well-posed
+problems</strong> that do not require any data assimilation</li>
 </ul>
-<h3 id="Incomplete-Models-and-Imperfect-Data"><a href="#Incomplete-Models-and-Imperfect-Data" class="headerlink" title="Incomplete Models and Imperfect Data"></a>Incomplete Models and Imperfect Data</h3><ul>
-<li>it is possible to find meaningful solutions even when the problem is not perfectly well posed</li>
-<li>when dealing with imperfect models and data, it is beneficial to integrate the <strong>Bayesian approach</strong> with physics-informed learning for uncertainty quantification</li>
-<li>physics-informed learning is <strong>mesh-free</strong>, without computationally expensive mesh generation</li>
+<h3 id="incomplete-models-and-imperfect-data">Incomplete Models and
+Imperfect Data</h3>
+<ul>
+<li>it is possible to find meaningful solutions even when the problem is
+not perfectly well posed</li>
+<li>when dealing with imperfect models and data, it is beneficial to
+integrate the <strong>Bayesian approach</strong> with physics-informed
+learning for uncertainty quantification</li>
+<li>physics-informed learning is <strong>mesh-free</strong>, without
+computationally expensive mesh generation</li>
 </ul>
-<h3 id="Strong-generalization-in-small-data-regime"><a href="#Strong-generalization-in-small-data-regime" class="headerlink" title="Strong generalization in small data regime"></a>Strong generalization in small data regime</h3><ul>
-<li>physics-informed learning has the advantage of <strong>strong generalization in the small data regime</strong></li>
-<li>to enforce the physics, one can embed the physical principles into the network architecture, use physics as <strong>soft penalty constraints</strong> or use <strong>data augmentation</strong></li>
+<h3 id="strong-generalization-in-small-data-regime">Strong
+generalization in small data regime</h3>
+<ul>
+<li>physics-informed learning has the advantage of <strong>strong
+generalization in the small data regime</strong></li>
+<li>to enforce the physics, one can embed the physical principles into
+the network architecture, use physics as <strong>soft penalty
+constraints</strong> or use <strong>data augmentation</strong></li>
 </ul>
-<h3 id="Understanding-Deep-Learning"><a href="#Understanding-Deep-Learning" class="headerlink" title="Understanding Deep Learning"></a>Understanding Deep Learning</h3><ul>
-<li><p>physical principles are also being used to provide theoretical insight and elucidate the inner mechanisms behind the surprising effectiveness of deep learning</p>
-</li>
-<li><p>Shallow NNs can also be viewed as <strong>interacting particle systems</strong> and hence can be analyzed in the <strong>probability measure space</strong> with mean-field theory, instead of the high-dimensional parameter space</p>
-</li>
+<h3 id="understanding-deep-learning">Understanding Deep Learning</h3>
+<ul>
+<li><p>physical principles are also being used to provide theoretical
+insight and elucidate the inner mechanisms behind the surprising
+effectiveness of deep learning</p></li>
+<li><p>Shallow NNs can also be viewed as <strong>interacting particle
+systems</strong> and hence can be analyzed in the <strong>probability
+measure space</strong> with mean-field theory, instead of the
+high-dimensional parameter space</p></li>
 </ul>
-<h3 id="Tackling-High-Dimensionality"><a href="#Tackling-High-Dimensionality" class="headerlink" title="Tackling High Dimensionality"></a>Tackling High Dimensionality</h3><ul>
-<li>DNNs can break the <strong>curse of dimensionality</strong> under the condition that the <em>target function is a hierarchical composition of local functions</em></li>
-<li>GANs can be used to quantify parametric uncertainty in high-dimensional stochastic differential equations</li>
-<li>deep operator networks can tackle the curse of dimensionality associated with the input space</li>
+<h3 id="tackling-high-dimensionality">Tackling High Dimensionality</h3>
+<ul>
+<li>DNNs can break the <strong>curse of dimensionality</strong> under
+the condition that the <em>target function is a hierarchical composition
+of local functions</em></li>
+<li>GANs can be used to quantify parametric uncertainty in
+high-dimensional stochastic differential equations</li>
+<li>deep operator networks can tackle the curse of dimensionality
+associated with the input space</li>
 </ul>
-<h3 id="Uncertainty-quantification"><a href="#Uncertainty-quantification" class="headerlink" title="Uncertainty quantification"></a>Uncertainty quantification</h3><ul>
-<li><strong>Categories</strong>: from physics, from data, from learning models</li>
+<h3 id="uncertainty-quantification">Uncertainty quantification</h3>
+<ul>
+<li><strong>Categories</strong>: from physics, from data, from learning
+models</li>
 </ul>
-<h2 id="Applications"><a href="#Applications" class="headerlink" title="Applications"></a>Applications</h2><ul>
+<h2 id="applications">Applications</h2>
+<ul>
 <li>Main Usage: inverse and ill-posed problems</li>
 </ul>
-<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><ul>
+<h3 id="examples">Examples</h3>
+<ul>
 <li>Flow over an espresso cup</li>
 <li>Physics-informed deep learning for 4D-flow MRI</li>
-<li>Studying transitions between metastable states of a distribution</li>
+<li>Studying transitions between metastable states of a
+distribution</li>
 <li>Application to quantum chemistry</li>
 <li>Thermodynamically consistent PINNs</li>
 <li>Application to material sciences</li>
 <li>Application to molecular simulations</li>
 </ul>
-<h3 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h3><p><img src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220805230212253.png" alt="image-20220805230212253"></p>
-<h3 id="Which-Model"><a href="#Which-Model" class="headerlink" title="Which Model?"></a>Which Model?</h3><p>PINNs are used to infer a <strong>deterministic function</strong> that is compatible with an underlying physical law when <strong>a limited number of observations</strong> is available</p>
+<h3 id="software">Software</h3>
+<figure>
+<img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/image-20220805230212253.png"
+alt="image-20220805230212253" />
+<figcaption aria-hidden="true">image-20220805230212253</figcaption>
+</figure>
+<h3 id="which-model">Which Model?</h3>
+<p>PINNs are used to infer a <strong>deterministic function</strong>
+that is compatible with an underlying physical law when <strong>a
+limited number of observations</strong> is available</p>
 <ul>
-<li><strong>MLP</strong>: generally applicable but <strong>does not encode any specialized inductive biases</strong></li>
-<li><strong>CNN</strong>: suitable for <strong>gridded 2D domains</strong></li>
-<li><strong>Fourier feature network</strong>: suitable for PDEs whose <strong>solution exhibits high frequencies or periodic boundaries</strong></li>
-<li><strong>Recurrent Architectures</strong>: suitable for non-Markovian and time-discrete problems</li>
+<li><strong>MLP</strong>: generally applicable but <strong>does not
+encode any specialized inductive biases</strong></li>
+<li><strong>CNN</strong>: suitable for <strong>gridded 2D
+domains</strong></li>
+<li><strong>Fourier feature network</strong>: suitable for PDEs whose
+<strong>solution exhibits high frequencies or periodic
+boundaries</strong></li>
+<li><strong>Recurrent Architectures</strong>: suitable for non-Markovian
+and time-discrete problems</li>
 </ul>
-<h2 id="Current-Limitations"><a href="#Current-Limitations" class="headerlink" title="Current Limitations"></a>Current Limitations</h2><ul>
+<h2 id="current-limitations">Current Limitations</h2>
+<ul>
 <li>Multiscale and multiphysics problems</li>
 <li>New algorithms and computational frameworks</li>
 <li>Data generation and benchmarks</li>
 <li>New mathematics</li>
 </ul>
-<h2 id="Future-Directions"><a href="#Future-Directions" class="headerlink" title="Future Directions"></a>Future Directions</h2><ul>
+<h2 id="future-directions">Future Directions</h2>
+<ul>
 <li>Digital twins</li>
 <li>Data and model transformations, fusion, and interpretability</li>
-<li>Searching for intrinsic variables and emergent, useful representations</li>
+<li>Searching for intrinsic variables and emergent, useful
+representations</li>
 </ul>
 <blockquote>
-<p>Ultimately, the main element we see changing is what we mean by ‘<strong>understanding</strong>’. Up to now, understanding meant that, say, <strong>each term in a PDE had a physical or mechanistic interpretation operated on some physically meaningful observables (dependent variables) and also operated in terms of some physically meaningful space&#x2F;time (independent) variables</strong>. Now, it becomes possible to <strong>make accurate predictions without this type of mechanistic understanding</strong> — and ‘understanding’ is something that may be redefined in the process.</p>
+<p>Ultimately, the main element we see changing is what we mean by
+‘<strong>understanding</strong>’. Up to now, understanding meant that,
+say, <strong>each term in a PDE had a physical or mechanistic
+interpretation operated on some physically meaningful observables
+(dependent variables) and also operated in terms of some physically
+meaningful space/time (independent) variables</strong>. Now, it becomes
+possible to <strong>make accurate predictions without this type of
+mechanistic understanding</strong> — and ‘understanding’ is something
+that may be redefined in the process.</p>
 </blockquote>
 
     </div>
