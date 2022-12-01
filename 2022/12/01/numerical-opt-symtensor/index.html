@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.13.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Basic Information  Title: Numerical Optimization for Symmetric Tensor Decomposition Authors: Tamara G. Kolda et al. Pub Date: 2015-06-01 Journal&#x2F;Conference: Mathematical Programming">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Numerical Optimization for Symmetric Tensor Decomposition">
+<meta property="og:url" content="http://example.com/2022/12/01/numerical-opt-symtensor/index.html">
+<meta property="og:site_name" content="Hongjue&#39;s Space">
+<meta property="og:description" content="Basic Information  Title: Numerical Optimization for Symmetric Tensor Decomposition Authors: Tamara G. Kolda et al. Pub Date: 2015-06-01 Journal&#x2F;Conference: Mathematical Programming">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-12-01T14:45:39.000Z">
+<meta property="article:modified_time" content="2022-12-01T14:53:43.072Z">
+<meta property="article:author" content="Hongjue Zhao">
+<meta property="article:tag" content="tensor decomposition">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2022/12/01/numerical-opt-symtensor/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2022/12/01/numerical-opt-symtensor/","path":"2022/12/01/numerical-opt-symtensor/","title":"Numerical Optimization for Symmetric Tensor Decomposition"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Numerical Optimization for Symmetric Tensor Decomposition | Hongjue's Space</title>
+  
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hongjue's Space</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section">Home</a></li><li class="menu-item menu-item-about"><a href="/About-Me/" rel="section">About</a></li><li class="menu-item menu-item-tags"><a href="/Tags/" rel="section">Tags</a></li><li class="menu-item menu-item-categories"><a href="/Categories/" rel="section">Categories</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-information"><span class="nav-number">1.</span> <span class="nav-text">Basic Information</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction"><span class="nav-number">2.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#background"><span class="nav-number">3.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#related-problems"><span class="nav-number">4.</span> <span class="nav-text">Related Problems</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cp-decomposition"><span class="nav-number">4.1.</span> <span class="nav-text">CP Decomposition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cp-decomposition-with-partial-symmetry"><span class="nav-number">4.2.</span> <span class="nav-text">CP Decomposition with
+Partial Symmetry</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#best-symmetric-rank-1-approximation"><span class="nav-number">4.3.</span> <span class="nav-text">Best Symmetric Rank-1
+Approximation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#symmetric-tucker-decomposition"><span class="nav-number">4.4.</span> <span class="nav-text">Symmetric Tucker
+Decomposition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#complex-valued-symmetric-tensor-decomposition"><span class="nav-number">4.5.</span> <span class="nav-text">Complex-valued
+symmetric tensor decomposition</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#optimization-formulations-for-symmetric-tensor-decomposition"><span class="nav-number">5.</span> <span class="nav-text">Optimization
+Formulations for Symmetric Tensor Decomposition</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#index-multiplicities"><span class="nav-number">5.1.</span> <span class="nav-text">Index Multiplicities</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#two-formulations"><span class="nav-number">5.2.</span> <span class="nav-text">Two Formulations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#penalty"><span class="nav-number">5.3.</span> <span class="nav-text">Penalty</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ignoring-symmetry"><span class="nav-number">5.4.</span> <span class="nav-text">Ignoring Symmetry</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Hongjue Zhao</p>
+  <div class="site-description" itemprop="description">Welcome to My Personal Web & Blog!</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/ZhaoHongjue" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ZhaoHongjue" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="Hongjue:hongjue0830@zju.edu.cn" title="E-Mail → Hongjue:hongjue0830@zju.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/12/01/numerical-opt-symtensor/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hongjue Zhao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hongjue's Space">
+      <meta itemprop="description" content="Welcome to My Personal Web & Blog!">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Numerical Optimization for Symmetric Tensor Decomposition | Hongjue's Space">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Numerical Optimization for Symmetric Tensor Decomposition
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-12-01 22:45:39 / Modified: 22:53:43" itemprop="dateCreated datePublished" datetime="2022-12-01T22:45:39+08:00">2022-12-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/paper/" itemprop="url" rel="index"><span itemprop="name">paper</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="basic-information">Basic Information</h2>
+<ul>
+<li><strong>Title</strong>: Numerical Optimization for Symmetric Tensor
+Decomposition</li>
+<li><strong>Authors</strong>: Tamara G. Kolda et al.</li>
+<li><strong>Pub Date</strong>: 2015-06-01</li>
+<li><strong>Journal/Conference</strong>: Mathematical Programming</li>
+</ul>
+<span id="more"></span>
+<h2 id="introduction">Introduction</h2>
+<ul>
+<li><p>For symmetric real-valued, <span
+class="math inline">\(m\)</span>-way and <span
+class="math inline">\(n\)</span>-dimension tensor <span
+class="math inline">\(\boldsymbol{\mathcal{A}}\)</span>, it can be
+decomposed as <span class="math display">\[
+  \boldsymbol{\mathcal{A}} = \sum\limits_{k=1}^{p} \lambda_{k}
+\boldsymbol{x}_{k}^{m},
+  \tag{\S}
+  \]</span></p>
+<p>with <span class="math inline">\(\lambda_{k}\in \mathbb{R}\)</span>
+and <span
+class="math inline">\(\boldsymbol{x}_{k}\in\mathbb{R}^n\)</span> for
+<span class="math inline">\(k = 1, \dots, p\)</span>. <img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/202212011427916.png" /></p></li>
+<li><p>Let <span class="math inline">\(\boldsymbol{\mathcal{A}} \ge
+0\)</span> represent an <span class="math inline">\(m\)</span>-way,
+<span class="math inline">\(n\)</span>-dimension nonnegative symmetric
+tensor. In this case, the goal is the factorization of a the form <span
+class="math display">\[
+  \boldsymbol{\mathcal{A}} = \sum\limits_{k=1}^{p}
+\boldsymbol{x}^{m}_{k} \quad \text{with}~\boldsymbol{x}_{k}\ge 0
+  \]</span> If such a factorization exists, we say that <span
+class="math inline">\(\boldsymbol{\mathcal{A}}\)</span> is completely
+positive.</p></li>
+</ul>
+<h2 id="background">Background</h2>
+<ul>
+<li>Refer to <em>Tensor Decomposition and Applications</em></li>
+</ul>
+<h2 id="related-problems">Related Problems</h2>
+<h3 id="cp-decomposition">CP Decomposition</h3>
+<p>Details: - Refer to <em>Tensor Decomposition and
+Applications</em></p>
+<h3 id="cp-decomposition-with-partial-symmetry">CP Decomposition with
+Partial Symmetry</h3>
+<p>For simplicity of discussion, we assume a cubic tensor <span
+class="math inline">\(\boldsymbol{\mathcal{A}} \in \mathbb{R}^{[m,
+n]}\)</span>. For <span class="math inline">\(m = 3\)</span> and the
+last two dimensions being symmetric, this means <span
+class="math display">\[
+a_{ijk} = a_{ikj} \quad \forall i, j, k \in \{ 1, \dots, n \},
+\]</span> and the factorization should be of the form <span
+class="math display">\[
+\boldsymbol{\mathcal{A}} = \sum\limits_{k=1}^{p} \boldsymbol{u}_{k}
+\circ \boldsymbol{v}_{k} \circ \boldsymbol{v}_{k}
+\]</span> In other words, the last two vectors in each component are
+equal.</p>
+<ul>
+<li>Carroll and Chang proposed to use an <em>alternating method</em>
+that ignores symmetry, with the idea that it will often converge to a
+symmetric solution (up to diagonal scaling).</li>
+<li>Later work showed that not all <em>KKT</em> points satisfy this
+condition</li>
+</ul>
+<p><img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/202212011447464.png" /></p>
+<h3 id="best-symmetric-rank-1-approximation">Best Symmetric Rank-1
+Approximation</h3>
+<p><span class="math display">\[
+\min \| \boldsymbol{\mathcal{A}} - \lambda \boldsymbol{x}^{m} \| \quad
+\text{subject to}~
+\lambda \in \mathbb{R},~\boldsymbol{x} \in \mathbb{R}^{n}.
+\]</span></p>
+<p><img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/202212011448447.png" /></p>
+<p>This problem is directly related to the problem of computing tensor
+<em>Z-eigen pair</em>. A pair <span class="math inline">\((\lambda,
+\boldsymbol{x})\)</span> is a Z-eigen pair of a tensor <span
+class="math inline">\(\boldsymbol{\mathcal{A}} \in \mathbb{S}^{[m,
+n]}\)</span> if</p>
+<p><span class="math display">\[
+\boldsymbol{\mathcal{A}} \boldsymbol{x}^{m-1} = \lambda \boldsymbol{x}
+~\text{and}~ \|\boldsymbol{x}\| = 1.
+\]</span> where <span
+class="math inline">\(\boldsymbol{\mathcal{A}}\boldsymbol{x}^{m-1}\)</span>
+denotes a vector in <span class="math inline">\(\mathbb{R}^n\)</span>
+such that <span class="math display">\[
+(\boldsymbol{\mathcal{A}} \boldsymbol{x}^{m-1})_{i_{1}}=
+a_{\boldsymbol{i}} x_{i_{2}} \cdots x_{i_{m}} ~\text{for}~ i_{1} \in
+\{1, \dots, n\}.
+\]</span></p>
+<p>The problems are related because any KKT point is a Z-eigen pair of
+<span class="math inline">\(\boldsymbol{\mathcal{A}}\)</span>.</p>
+<h3 id="symmetric-tucker-decomposition">Symmetric Tucker
+Decomposition</h3>
+<p>Here the goal is to find an orthogonal matrix <span
+class="math inline">\(\boldsymbol{U} \in \mathbb{R}^{n \times
+p}\)</span> and a symmetric tensor <span
+class="math inline">\(\boldsymbol{\mathcal{B}} \in \mathbb{S}^{[m,
+p]}\)</span> that solves <span class="math display">\[
+\begin{aligned}
+&amp;\min \left\| \boldsymbol{\mathcal{A}} -
+\hat{\boldsymbol{\mathcal{A}}} \right\|\\
+&amp;\text{s.t.}~\hat{a}_\boldsymbol{i} = b_{j_{1}j_{2}\dots j_{m}}
+u_{i_{1}j_{1}} u_{i_{2}j_{2}} \cdots u_{i_{m}j_{m}}
+\end{aligned}
+\]</span> <img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/202212011523048.png" /></p>
+<h3 id="complex-valued-symmetric-tensor-decomposition">Complex-valued
+symmetric tensor decomposition</h3>
+<p><span class="math display">\[
+\boldsymbol{\mathcal{A}} = \sum\limits_{k=1}^{p} \boldsymbol{x}_{k}^{m}
+\quad \text{with}~ \boldsymbol{x}_{k} \in \mathbb{C}^{n}~(k=1, \dots, p)
+\]</span></p>
+<h2
+id="optimization-formulations-for-symmetric-tensor-decomposition">Optimization
+Formulations for Symmetric Tensor Decomposition</h2>
+<h3 id="index-multiplicities">Index Multiplicities</h3>
+<p>For <span class="math inline">\(\boldsymbol{\mathcal{A}} \in
+\mathbb{S}^{[m, n]}\)</span> has <span
+class="math inline">\(n^{m}\)</span> entries.</p>
+<ol type="1">
+<li><p>Let the set of all possible indices be denoted by <span
+class="math display">\[
+\mathcal{R} = \{(i_{1}, \dots, i_{m}) \mid i_{1}, \dots, i_{m} \in \{ 1,
+\dots, n \}\}
+\]</span></p>
+<p>Obviously, <span class="math inline">\(|\mathcal{R}| =
+n^m\)</span>.</p></li>
+<li><p>Following, we define an <em>index class</em> as a set of tensor
+indices such that the corresponding tensor entries all share a value due
+to symmetry. <span class="math display">\[
+\mathcal{I} = \{(i_{1}, \dots, i_{m}) \mid i_{1}, \dots, i_{m} \in \{ 1,
+\dots, n \} ~\text{and}~i_{1}\le i_{2}\le \cdots \le i_{m}\} \subset
+\mathcal{R}
+\]</span></p></li>
+<li><p>Each index class also has a <em>monomial representation</em>. For
+each <span class="math inline">\(\boldsymbol{i} \in \mathcal{I}\)</span>
+there exists a corresponding monomial representation <span
+class="math inline">\(\boldsymbol{c}\)</span> such that <span
+class="math display">\[
+x_{i_{1}} x_{i_{2}} \cdots x_{i_{m}} = x_{1}^{c_{1}}x_{1}^{c_{2}}\cdots
+x_{n}^{c_{n }}
+\]</span> Specially, <span class="math inline">\(c_{j}\)</span>
+represents that number of occurrences of index <span
+class="math inline">\(j\)</span> in <span
+class="math inline">\(\boldsymbol{i}\)</span> of <span
+class="math inline">\(j = 1, \dots, n\)</span>. Clearly, <span
+class="math inline">\(\sum\limits_{j} c_{j} = m\)</span>. Conversely,
+for a given, <span class="math inline">\(\boldsymbol{c}\)</span>, we
+build an index <span class="math inline">\(\boldsymbol{i}\)</span> with
+<span class="math inline">\(c_1\)</span> copies of <span
+class="math inline">\(1\)</span>, <span
+class="math inline">\(c_{2}\)</span> copies of <span
+class="math inline">\(2\)</span>, etc. The set of monomial
+representations is denoted by <span class="math display">\[
+\mathcal{C} = \{ (c_{1}, \dots, c_{n}) \mid c_{1}, \dots, c_{n} \in \{
+0, \dots, m \} ~\text{and}~ c_{1} + \dots + c_{n} = m \}.
+\]</span> And <span class="math display">\[
+|\mathcal{I}| = |\mathcal{C}| = C_{m}^{m+n-1} = \frac{n^{m}}{m!} +
+O(n^{m-1})
+\]</span></p></li>
+<li><p>The multiplicity of the entry corresponding to a monomial
+representation <span class="math inline">\(\boldsymbol{c}\)</span> is
+<span class="math display">\[
+\sigma_\boldsymbol{c} = \begin{pmatrix} m \\ c_{1}, c_{2}, \dots,
+c_{n}\end{pmatrix} = \frac{m!}{c_{1}! c_{2}!\cdots c_{n}!}
+\]</span></p></li>
+</ol>
+<p>For <span class="math inline">\(\mathcal{S}^{[3, 2]}\)</span>: <img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/202212011911375.png" /></p>
+<p>In this case <span class="math display">\[
+\|\boldsymbol{\mathcal{A}}\|^{2}= \sum\limits_{\boldsymbol i \in
+\mathcal R} a_{\boldsymbol{i}}^{2}= \sum\limits_{\boldsymbol{i} \in
+\mathcal{I}} \sigma_\boldsymbol{i} a_\boldsymbol{i}^{2} =
+\sum\limits_{\boldsymbol{c} \in \mathcal{C}}\sigma_\boldsymbol{c}
+a_\boldsymbol{c}^{2},
+\]</span> and <span class="math display">\[
+(\boldsymbol{x}_{k}^{m})_{\boldsymbol{i}} = x_{i_{1}k} x_{i_{2}k} \cdots
+x_{i_{m}k} = (\boldsymbol{x}_{k}^{m})_\boldsymbol{c} = x_{1k}^{c_{1}}
+x_{2k}^{c_{2}} \cdots x_{nk}^{c_n}
+\]</span></p>
+<h3 id="two-formulations">Two Formulations</h3>
+<p>For given <span class="math inline">\(\boldsymbol{\mathcal{A}} \in
+\mathbb{R}^{[m,n]}\)</span> and <span class="math inline">\(p\)</span>,
+our goal is to find <span
+class="math inline">\(\boldsymbol{\lambda}\)</span> and <span
+class="math inline">\(\boldsymbol{X}\)</span> such that <span
+class="math inline">\((\S)\)</span> is satisfied in a minimization
+sense.</p>
+<ol type="1">
+<li><p>Standard Least Squares <span class="math display">\[
+f_{1}(\boldsymbol{\lambda}, \boldsymbol{X}) =
+\sum\limits_{\boldsymbol{i} \in \mathcal{R}}\left( a_\boldsymbol{i} -
+\sum\limits_{k=1}^{p} \lambda_{k}
+(\boldsymbol{x}_{k}^{m})_\boldsymbol{i} \right)^{2} =
+\sum\limits_{\boldsymbol{i} \in \mathcal{I}} \sigma_\boldsymbol{i}
+\left( a_\boldsymbol{i} - \sum\limits_{k=1}^{p} \lambda_{k}
+(\boldsymbol{x}_{k}^{m})_\boldsymbol{i} \right),
+\]</span></p>
+<p>This counts each unique entry multiple times, according to its
+multiplicity.</p></li>
+<li><p>Counts each unique entry only once <span class="math display">\[
+f_{2}(\boldsymbol{\lambda}, \boldsymbol{X}) =
+\sum\limits_{\boldsymbol{i} \in \mathcal{I}} \left( a_\boldsymbol{i} -
+\sum\limits_{k=1}^{p} \lambda_{k}
+(\boldsymbol{x}^{m}_{k})_\boldsymbol{i} \right)^2
+\]</span></p></li>
+</ol>
+<p>Both of them can be expressed as <span class="math display">\[
+f_{\boldsymbol{w}}(\boldsymbol{\lambda}, \boldsymbol{X}) =
+\sum\limits_{\boldsymbol{i} \in \mathcal{I}} {w}_\boldsymbol{i} \left(
+a_\boldsymbol{i} - \sum\limits_{k=1}^{p} \lambda_{k}
+(\boldsymbol{x}^{m}_{k})_\boldsymbol{i} \right)^{2} =
+\sum\limits_{\boldsymbol{i} \in \mathcal{I}} w_\boldsymbol{i}
+\delta_\boldsymbol{i}^{2}.
+\]</span> - <span class="math inline">\({w}_\boldsymbol{i} =
+\sigma_\boldsymbol{i}\)</span> yields <span
+class="math inline">\(f_1\)</span> whereas <span
+class="math inline">\(w_\boldsymbol{i} =1\)</span> yields <span
+class="math inline">\(f_{2}\)</span> - <span
+class="math inline">\(\delta_\boldsymbol{i}\)</span> denotes the
+difference between the model and the tensor at entry <span
+class="math inline">\(\boldsymbol{i}\)</span>.</p>
+<h3 id="penalty">Penalty</h3>
+<ul>
+<li><p><strong>Scaling Ambiguity</strong>: require <span
+class="math inline">\(\|\boldsymbol{x}_{k}\| = 1\)</span> <span
+class="math display">\[\begin{aligned}
+  p_{\gamma}(\boldsymbol{X}) &amp;= \gamma \sum\limits_{k=1}^{p}\left(
+\boldsymbol{x}_{k}^{\top}\boldsymbol{x}_{k} -1 \right)^{2}\\
+  \Rightarrow \frac{\partial p_{\gamma}}{\partial
+\boldsymbol{x}_{k}}&amp;= 4\gamma \left( \boldsymbol{x}_{k}^{\top}
+\boldsymbol{x}_{k} -1 \right) \boldsymbol{x}_{k}
+  \end{aligned}
+  \]</span></p></li>
+<li><p><strong>Sparse Ambiguity</strong>: when <span
+class="math inline">\(p\)</span> (rank) is large. use an approximate
+<span class="math inline">\(l_{1}\)</span> penalty <span
+class="math display">\[
+  p_{\alpha, \beta}(\boldsymbol{\lambda}) = \frac{\beta}{\alpha}
+\sum\limits_{k=1}^{p} \left\{\log [1 + \exp(-\alpha \lambda_{k})] + \log
+[1 + \exp(\alpha \lambda_{k})]\right\} \approx \beta
+\|\boldsymbol{\lambda}\|_{1}
+  \]</span> Note that the <span class="math inline">\(\beta\)</span>
+term is not part of the approximation but rather the weight of the
+penalization.</p></li>
+</ul>
+<p>Above all, the final function to be optimized is <span
+class="math display">\[
+\hat{f}(\boldsymbol{\lambda}, \boldsymbol{X}) =
+f_\boldsymbol{w}(\boldsymbol{\lambda}, \boldsymbol{X}) + p_{\gamma}
+(\boldsymbol{X}) + p_{\alpha, \beta} (\boldsymbol{\boldsymbol{\lambda}})
+\]</span> - <span class="math inline">\(\boldsymbol{w}\)</span>
+determines the choice of objective function - <span
+class="math inline">\(\gamma\)</span> determines the weight of the
+penalty on the norm of the columns of <span
+class="math inline">\(\boldsymbol{X}\)</span> - Since this constraint is
+easy to satisfy and mostly convenience, the exact choice of <span
+class="math inline">\(\gamma\)</span> is not critical. - <span
+class="math inline">\(\alpha\)</span> determines the <em>steepness</em>
+of the <span class="math inline">\(l_{1}\)</span> penalty function. -
+<span class="math inline">\(\beta\)</span> determines the weight of the
+<em>sparsity-encouraging penalty</em>.</p>
+<h3 id="ignoring-symmetry">Ignoring Symmetry</h3>
+<p><strong>Basic Idea</strong>: - Under mild conditions, the CP
+decomposition is unique up to permutation and scaling of the components,
+i.e., <em>essentially unique</em>. - The sufficient condition for the
+uniqueness of CP decomposition: <span class="math display">\[
+    2p + (m-1) \le m~\text{k-rank}(\boldsymbol{X})
+    \tag{\dagger}
+    \]</span> - The <span
+class="math inline">\(\text{k-rank}(\boldsymbol{X})\)</span> is the
+largest number <span class="math inline">\(k\)</span> such that every
+subset of <span class="math inline">\(k\)</span> columns of <span
+class="math inline">\(\boldsymbol{X}\)</span> is linearly independent. -
+<span class="math inline">\(\text{k-rank}(\boldsymbol{X}) \le \min\{n,
+p\}\)</span> - The importance of essential uniqueness is that the global
+solution of the unconstrained problem is the same as for the symmetric
+problem so long as X satisfies <span
+class="math inline">\((\dagger)\)</span>.</p>
+<p><strong>Advantage</strong>: We can use existing software for the CP
+decomposition.</p>
+<p><strong>Disadvantage</strong>: It requires <span
+class="math inline">\(m\)</span> times as much storage.</p>
+<p><img
+src="http://zhj-0830.oss-cn-hangzhou.aliyuncs.com/img/202212012105368.png" /></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/tensor-decomposition/" rel="tag"># tensor decomposition</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/11/30/tensor/" rel="prev" title="Tensor Decomposition and Applications">
+                  <i class="fa fa-chevron-left"></i> Tensor Decomposition and Applications
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hongjue Zhao</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
