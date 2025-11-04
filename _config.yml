@@ -274,8 +274,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Hongjue, Zhao, Hongjue Zhao]
-  first_name: [Zhao, Hongjue]
+  last_name: [Hongjue, Hongjue Zhao]
+  first_name: [Zhao]
 
   style: apa
   locale: en
