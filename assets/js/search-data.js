@@ -50,6 +50,9 @@ ninja.data = [{
           section: "News",},{id: "news-our-paper-restorml-is-accepted-by-dcoss-iot-2025-and-received-best-paper-award-congratulations-to-jinyang",
           title: 'Our paper RestorML is accepted by DCOSS-IoT 2025 and received best paper award....',
           description: "",
+          section: "News",},{id: "news-our-paper-adats-is-accepted-by-neurips-2025-congratulations-to-deniz",
+          title: 'Our paper [AdaTS] is accepted by NeurIPS 2025. Congratulations to Deniz!',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
