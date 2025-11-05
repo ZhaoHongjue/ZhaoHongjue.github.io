@@ -28,6 +28,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am Hongjue Zhao (赵泓珏), a second-year Ph.D. student in Computer Science at the [University of Illinois Urbana-Champaign (UIUC)](https://illinois.edu/), under the supervision of [Prof. Tarek Abdelzaher](https://abdelzaher.cs.illinois.edu/). I received my Bachelor’s degree in Automation from the [Zhejiang University](https://www.zju.edu.cn/), where I was affiliated with the [Chu Kochen Honor College](http://ckc.zju.edu.cn/ckcen/) and [College of Control Science and Engineering](http://www.cse.zju.edu.cn/cseenglish/main.htm).
+I am Hongjue Zhao (赵泓珏), a second-year Ph.D. student in Computer Science at [University of Illinois Urbana-Champaign (UIUC)](https://illinois.edu/), under the supervision of [Prof. Tarek Abdelzaher](https://abdelzaher.cs.illinois.edu/). I received my Bachelor’s degree in Automation from [Zhejiang University](https://www.zju.edu.cn/), where I was affiliated with [Chu Kochen Honor College](http://ckc.zju.edu.cn/ckcen/) and [College of Control Science and Engineering](http://www.cse.zju.edu.cn/cseenglish/main.htm).
 
 My research interests lie in **physics-informed machine learning for cyber-physical systems**. Specifically, I aim to **integrate AI with control theory** to enhance the performance, robustness, and reliability of AI algorithms across various applications.
