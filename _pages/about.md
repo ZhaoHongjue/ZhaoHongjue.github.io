@@ -7,7 +7,7 @@ subtitle: PhD Student in Computer Science at <a href='https://illinois.edu/'>UIU
 profile:
   align: right
 
-  image: zhj.jpg
+  image: xixi.jpg
   image_circular: false # crops the image to make it circular
   more_info:
     # <p>Siebel Center 4111</p>
