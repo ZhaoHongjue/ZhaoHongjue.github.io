@@ -56,8 +56,11 @@ ninja.data = [{
           section: "News",},{id: "news-our-paper-odesteer-is-accepted-by-iclr-2026",
           title: 'Our paper ODESteer is accepted by ICLR 2026!',
           description: "",
-          section: "News",},{id: "news-our-papers-westworld-and-dywave-were-accepted-to-icml-2026-and-westworld-received-a-spotlight-distinction-congratulations-to-yuchen-and-tommy",
-          title: 'Our papers WestWorld and Dywave were accepted to ICML 2026, and WestWorld received...',
+          section: "News",},{id: "news-our-papers-westworld-is-accepted-by-iclr-2026-workshop-world-models-congratulations-to-yuchen",
+          title: 'Our papers WestWorld is accepted by ICLR 2026 Workshop World Models.Congratulations to Yuchen!...',
+          description: "",
+          section: "News",},{id: "news-our-papers-westworld-and-dywave-are-accepted-by-icml-2026-and-westworld-receives-a-spotlight-distinction-congratulations-to-yuchen-and-tommy",
+          title: 'Our papers WestWorld and Dywave are accepted by ICML 2026, and WestWorld receives...',
           description: "",
           section: "News",},{
         id: 'social-email',
