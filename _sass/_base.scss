@@ -132,6 +132,16 @@ blockquote {
   }
 }
 
+// About page sections
+
+.post > article {
+  > .news,
+  > .publications,
+  > .awards {
+    margin-bottom: 3rem;
+  }
+}
+
 // Checklist
 
 ul.task-list {

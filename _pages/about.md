@@ -22,6 +22,11 @@ announcements:
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
+awards:
+  enabled: true # includes a list of awards from `_data/awards.yml`
+  scrollable: false # adds a vertical scroll bar if there are more than 3 awards
+  limit: # leave blank to include all the awards in `_data/awards.yml`
+
 latest_posts:
   enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items

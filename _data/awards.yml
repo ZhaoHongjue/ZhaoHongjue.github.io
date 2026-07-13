@@ -1,0 +1,12 @@
+# Awards shown on the about page, newest first.
+# `description` supports inline HTML/markdown-style links.
+# Paper awards are also tagged on the corresponding entry in `_bibliography/papers.bib`
+# via the `award` / `award_name` fields, which render a highlighted badge on the paper.
+- year: 2026
+  description: Gold Reviewer for ICML 2026
+- year: 2026
+  description: ICML Spotlight Paper Award (<a href="/publications/#wang2026westworld">WestWorld</a>)
+- year: 2025
+  description: DCoSS-IoT Best Paper Award (<a href="/publications/#li2025restoreml">RestoreML</a>)
+- year: 2024
+  description: ACM SIGKDD Best Paper Award (<a href="/publications/#duong2024cat">CAT</a>)

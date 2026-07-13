@@ -12,12 +12,16 @@ layout: default
               href="{{ page.cv_pdf }}"
             {% else %}
               href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
+              download
             {% endif %}
             target="_blank"
             rel="noopener noreferrer"
-            class="float-right"
+            class="btn btn-sm z-depth-0 cv-download float-right"
+            role="button"
+            aria-label="Download CV as PDF"
           >
             <i class="fa-solid fa-file-pdf"></i>
+            Download PDF
           </a>
         {% endif %}
       </h1>
@@ -63,12 +67,16 @@ layout: default
               href="{{ page.cv_pdf }}"
             {% else %}
               href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
+              download
             {% endif %}
             target="_blank"
             rel="noopener noreferrer"
-            class="float-right"
+            class="btn btn-sm z-depth-0 cv-download float-right"
+            role="button"
+            aria-label="Download CV as PDF"
           >
             <i class="fa-solid fa-file-pdf"></i>
+            Download PDF
           </a>
         {% endif %}
       </h1>

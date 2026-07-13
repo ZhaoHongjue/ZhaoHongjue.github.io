@@ -16,161 +16,205 @@
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "GitHub",
+        "username": "ZhaoHongjue",
+        "url": "https://github.com/ZhaoHongjue"
       }
     ]
   },
+  "education": [
+    {
+      "institution": "University of Illinois Urbana-Champaign",
+      "location": "Urbana, IL, USA",
+      "url": "https://illinois.edu/",
+      "area": "Computer Science",
+      "studyType": "Ph.D. Student in Computer Science",
+      "startDate": "2024-08-01",
+      "endDate": "",
+      "courses": [
+        "Advisor: Prof. Tarek Abdelzaher",
+        "Research Interests: i) Physics-informed machine learning for Cyber-Physical Systems, ii) The intersection of AI and Control"
+      ]
+    },
+    {
+      "institution": "Zhejiang University",
+      "location": "Hangzhou, China",
+      "url": "https://www.zju.edu.cn/",
+      "area": "Automation",
+      "studyType": "B.Eng. in Automation",
+      "startDate": "2019-09-01",
+      "endDate": "2023-07-01",
+      "courses": [
+        "Received an Honor Degree in Chu Kochen Honors College",
+        "Overall GPA: 3.93/4.0 (88.39/100). The last two years GPA: 3.98/4.0 (89.33/100)"
+      ]
+    }
+  ],
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-
-  "awards": [
-    {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
+      "name": "Zhejiang University",
+      "position": "Research Assistant",
+      "location": "Hangzhou, China",
+      "url": "https://www.zju.edu.cn/",
+      "startDate": "2023-07-01",
+      "endDate": "2024-06-01",
+      "summary": "Advisor: Prof. Zhi Wang",
+      "highlights": ["Focused research about the intersection of AI and Control."]
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
+      "name": "William & Mary",
+      "position": "Research Intern",
+      "location": "Online",
+      "url": "https://www.wm.edu/",
+      "startDate": "2021-10-01",
+      "endDate": "2024-08-01",
+      "summary": "Advisor: Prof. Huajie Shao",
+      "highlights": ["Focused on research about polynomial neural networks and Neural ODEs."]
     }
   ],
   "publications": [
     {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "name": "WestWorld: A Knowledge-Encoded Scalable Trajectory World Model for Diverse Robotic Systems",
+      "publisher": "ICML 2026 Spotlight",
+      "releaseDate": "2026-07",
+      "url": "https://arxiv.org/abs/2603.14392v2",
+      "summary": "Yuchen Wang, Jiangtao Kong, Sizhe Wei, Xiaochang Li, Haohong Lin, Hongjue Zhao, Tianyi Zhou, Lu Gan, Huajie Shao"
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
+      "name": "Dywave: Event-Aligned Dynamic Tokenization for Heterogeneous IoT Sensing Signals",
+      "publisher": "ICML 2026",
+      "releaseDate": "2026-06",
+      "url": "https://arxiv.org/abs/2605.14014",
+      "summary": "Tomoyoshi Kimura, Denizhan Kara, Jinyang Li, Hongjue Zhao, Yigong Hu, Yizhuo Chen, Xiaomin Ouyang, Shengzhong Liu, Tarek Abdelzaher"
     },
     {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
-    }
-  ],
-  "skills": [
-    {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
+      "name": "ODESteer: A Unified ODE-Based Steering Framework for LLM Alignment",
+      "publisher": "ICLR 2026",
+      "releaseDate": "2026-04",
+      "url": "https://openreview.net/forum?id=CFewUmgIIL",
+      "summary": "Hongjue Zhao, Haosen Sun, Jiangtao Kong, Xiaochang Li, Qineng Wang, Liwei Jiang, Qi Zhu, Tarek Abdelzaher, Yejin Choi, Manling Li, Huajie Shao"
     },
     {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
-    }
-  ],
-  "interests": [
-    {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "name": "RestoreML: Practical Unsupervised Tuning of Deployed Intelligent IoT Systems",
+      "publisher": "DCOSS-IoT 2025 Best Paper",
+      "releaseDate": "2025-06",
+      "url": "https://ieeexplore.ieee.org/document/11096306",
+      "summary": "Jinyang Li, Yizhuo Chen, Ruijie Wang, Tomoyoshi Kimura, Tianshi Wang, You Lyu, Hongjue Zhao, Binqi Sun, Shangchen Wu, Yigong Hu, Denizhan Kara, Beitong Tian, Klara Nahrstedt, Suhas Diggavi, Jae H Kim, Greg Kimberly, Guijun Wang, Maggie Wigness, Tarek Abdelzaher"
     },
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "name": "A Generalizable Physics-Enhanced State Space Model for Long-Term Dynamics Forecasting in Complex Environments",
+      "publisher": "ICML 2025",
+      "releaseDate": "2025-07",
+      "url": "https://openreview.net/forum?id=9NrUIaH1sx",
+      "summary": "Yuchen Wang, Hongjue Zhao, Haohong Lin, Enze Xu, Lifang He, Huajie Shao"
+    },
+    {
+      "name": "Accelerating Neural ODEs: A Variational Formulation-based Approach",
+      "publisher": "ICLR 2025",
+      "releaseDate": "2025-04",
+      "url": "https://openreview.net/forum?id=trV41CpAK4",
+      "summary": "Hongjue Zhao, Yuchen Wang, Hairong Qi, Zijie Huang, Han Zhao, Lui Sha, Huajie Shao"
+    },
+    {
+      "name": "CAT: Interpretable Concept-based Taylor Additive Models",
+      "publisher": "KDD 2024 Best Paper",
+      "releaseDate": "2024-08",
+      "url": "https://dl.acm.org/doi/10.1145/3637528.3672020",
+      "summary": "Viet Duong, Qiong Wu, Zhengyi Zhou, Hongjue Zhao, Chenxiang Luo, Eric Zavesky, Huaxiu Yao, Huajie Shao"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Gold Reviewer",
+      "date": "2026",
+      "awarder": "International Conference on Machine Learning (ICML)",
+      "url": "",
+      "summary": ""
+    },
+    {
+      "title": "Spotlight Paper Award",
+      "date": "2026",
+      "awarder": "International Conference on Machine Learning (ICML)",
+      "url": "https://arxiv.org/abs/2603.14392v2",
+      "summary": "WestWorld: A Knowledge-Encoded Scalable Trajectory World Model for Diverse Robotic Systems"
+    },
+    {
+      "title": "Best Paper Award",
+      "date": "2025",
+      "awarder": "International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT)",
+      "url": "https://ieeexplore.ieee.org/document/11096306",
+      "summary": "RestoreML: Practical Unsupervised Tuning of Deployed Intelligent IoT Systems"
+    },
+    {
+      "title": "Best Paper Award",
+      "date": "2024",
+      "awarder": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)",
+      "url": "https://dl.acm.org/doi/10.1145/3637528.3672020",
+      "summary": "CAT: Interpretable Concept-based Taylor Additive Models"
     }
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "ODESteer",
+      "summary": "Corresponding Paper: ODESteer: A Unified ODE-Based Steering Framework for LLM Alignment",
+      "highlights": [
+        "Proposed a unified framework for activation steering in LLM alignment based on ODEs and barrier functions in control theory",
+        "Proposed a new steering method called ODESteer derived from our ODE-based unified framework",
+        "Tool used: Python (Pytorch)"
+      ],
+      "startDate": "2025-01-01",
+      "endDate": "2026-01-01",
+      "url": "https://odesteer.github.io/"
+    },
+    {
+      "name": "VF-NODE",
+      "summary": "Corresponding Paper: Accelerating Neural ODEs: A Variational Formulation-based Approach",
+      "highlights": [
+        "Proposed a kind of accelerating technique for Neural ODEs based on the variational formulation of ODEs",
+        "Significantly accelerated the training of Neural ODEs about 10 to 1000 times",
+        "Tool used: Python (JAX)"
+      ],
+      "startDate": "2023-01-01",
+      "endDate": "2025-01-01",
+      "url": "https://github.com/ZhaoHongjue/VF-NODE-ICLR2025"
+    },
+    {
+      "name": "TaylorNet",
+      "summary": "Corresponding Paper: CAT: Interpretable Concept-based Taylor Additive Models",
+      "highlights": [
+        "Designed a novel polynomial-based neural architecture",
+        "Utilized Tucker decomposition to reduce the computational complexity",
+        "Tool used: Python (Pytorch)"
+      ],
+      "startDate": "2022-01-01",
+      "endDate": "2024-01-01",
+      "url": "https://github.com/vduong143/CAT-KDD-2024"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming Skills",
+      "level": "",
+      "icon": "fa-solid fa-code",
+      "keywords": ["Python (Pytorch/JAX)", "C/C++", "Matlab"]
+    },
+    {
+      "name": "Hardware Tools",
+      "level": "",
+      "icon": "fa-solid fa-microchip",
+      "keywords": ["Arduino", "Raspberry Pi"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Fluent",
+      "icon": ""
+    },
+    {
+      "language": "Mandarin Chinese",
+      "fluency": "Native speaker",
+      "icon": ""
     }
   ]
 }
