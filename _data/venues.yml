@@ -7,3 +7,35 @@
 
 "Vision":
   color: "#009f36"
+
+"ICLR":
+  url: https://iclr.cc/
+  color: "#1f6feb"
+
+"ICML":
+  url: https://icml.cc/
+  color: "#d73a49"
+
+"NeurIPS":
+  url: https://neurips.cc/
+  color: "#6f42c1"
+
+"KDD":
+  url: https://www.kdd.org/
+  color: "#e36209"
+
+"ICCCN":
+  url: https://icccn.org/
+  color: "#0a7d5a"
+
+"DCOSS-IoT":
+  url: https://dcoss.org/
+  color: "#2b7489"
+
+"MASS":
+  url: https://ieee-mass.org/
+  color: "#b08800"
+
+"arXiv":
+  url: https://arxiv.org/
+  color: "#b31b1b"
